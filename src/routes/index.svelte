@@ -1,2 +1,16 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang="ts">
+</script>
+
+<div>
+	<div class="flex flex-col">
+		<div class="hero min-h-screen">
+			<div class="hero-content text-center">
+				<div class="max-w-md">
+					<h1 class="text-5xl font-bold">Hello There!</h1>
+					<p class="py-6">This is a candle business and we're really cool!</p>
+					<a class="btn btn-primary" href="/products">Check out our products!</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
