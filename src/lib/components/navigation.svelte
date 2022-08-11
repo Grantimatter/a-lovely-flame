@@ -1,8 +1,11 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	import { slide, fade } from 'svelte/transition';
+	import { fade } from 'svelte/transition';
+	import { Categories } from '$lib/product';
 
 	const avatar: string = 'https://placeimg.com/80/80/people';
+
+	const categories = Object.values(Categories).slice(0, Object.keys(Categories).length / 2)
 
 	function searchClicked() {
 		goto('/search');
@@ -31,9 +34,9 @@
 					class="p-2 bg-base-200 z-[50] border-primary border-2 border-opacity-75"
 					transition:fade
 				>
-					<li><a href="/products/candles">Candles & Wax Melts</a></li>
-					<li><a href="/products/bath">Bath Soaks</a></li>
-					<li><a href="/products/soap">Soap</a></li>
+					{#each categories as category}
+						<li><a href={`/products/category/${category}`}>{category}</a></li>
+					{/each}
 				</ul>
 			</li>
 		</ul>

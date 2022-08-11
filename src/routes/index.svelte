@@ -1,6 +1,10 @@
 <script lang="ts">
 </script>
 
+<svelte:head>
+	<title>A Lovely Flame</title>
+</svelte:head>
+
 <div>
 	<div class="flex flex-col">
 		<div class="hero min-h-screen">

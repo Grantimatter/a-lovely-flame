@@ -1,13 +1,18 @@
-<script context="module" lang="ts">
+
   export interface Product {
     name: string;
-    url: string;
     price: number;
     description: string;
     notes: ScentNotes[];
     thumbnail?: string;
     sku: string;
-    category: string;
+    categories: Categories[];
+  }
+
+  export enum Categories {
+    Candles,
+    BathSoaks,
+    SoapBars
   }
 
   export enum ScentNotes {
@@ -23,4 +28,3 @@
     Spicy,
     Gourmand
   }
-</script>
