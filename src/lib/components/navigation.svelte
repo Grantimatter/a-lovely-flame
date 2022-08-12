@@ -5,10 +5,14 @@
 
 	const avatar: string = 'https://placeimg.com/80/80/people';
 
-	const categories = Object.values(Categories).slice(0, Object.keys(Categories).length / 2)
+	const categories: string[] = Object.values(Categories).slice(0, Object.keys(Categories).length / 2);
 
 	function searchClicked() {
 		goto('/search');
+	}
+
+	function spaceCamel(input: string): string {
+		return input.replace(/([A-Z])/g, ' $1').trim()
 	}
 </script>
 
@@ -35,14 +39,9 @@
 					transition:fade
 				>
 					{#each categories as category}
-						<li><a href={`/products/category/${category}`}>{category}</a></li>
+						<li><a href={`/products/category/${category.toLowerCase()}`}>{spaceCamel(category)}</a></li>
 					{/each}
 				</ul>
-			</li>
-			<li>
-				<a href="/saftey">
-					Candle Safety
-				</a>
 			</li>
 			<li>
 				<a href="/blog">
@@ -55,7 +54,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="/FAQ">
+				<a href="/faq">
 					FAQ
 				</a>
 			</li>

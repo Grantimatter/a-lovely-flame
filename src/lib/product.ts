@@ -12,7 +12,7 @@
   export enum Categories {
     Candles,
     BathSoaks,
-    SoapBars
+    Soap,
   }
 
   export enum ScentNotes {

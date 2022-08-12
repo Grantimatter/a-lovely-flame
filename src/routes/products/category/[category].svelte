@@ -1,6 +1,3 @@
-<script context="module">
-</script>
-
 <script lang="ts">
 	import type { Categories, Product } from '$lib/product';
 	import ProductList from '$lib/components/productList.svelte';
@@ -13,7 +10,7 @@
 </svelte:head>
 
 {#if products.length > 0}
-	<ProductList productList={products}></ProductList>	
+	<ProductList productList={products}></ProductList>
 {:else}
 	<div class="text-5xl font-bold text-center p-16">No products were found!</div>
 {/if}

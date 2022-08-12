@@ -39,7 +39,7 @@ const dummyProducts: Product[] = [{
     thumbnail: "https://picsum.photos/400/300?random=2"
 },
 {
-    categories: [Categories.SoapBars],
+    categories: [Categories.Soap],
     description: "It's a bar of soap, neat!",
     name: "Soap On the Rocks",
     notes: [ScentNotes.Sweet, ScentNotes.Fresh],
@@ -48,7 +48,7 @@ const dummyProducts: Product[] = [{
     thumbnail: "https://picsum.photos/400/300?random=3"
 },
 {
-    categories: [Categories.SoapBars],
+    categories: [Categories.Soap],
     description: "It's a bar of soap, neat!",
     name: "Soap On the Rocks",
     notes: [ScentNotes.Sweet, ScentNotes.Fresh],
@@ -57,7 +57,7 @@ const dummyProducts: Product[] = [{
     thumbnail: "https://picsum.photos/400/300?random=4"
 },
 {
-    categories: [Categories.SoapBars],
+    categories: [Categories.Soap],
     description: "It's a bar of soap, neat!",
     name: "Soap On the Rocks",
     notes: [ScentNotes.Sweet, ScentNotes.Fresh],
@@ -66,7 +66,7 @@ const dummyProducts: Product[] = [{
     thumbnail: "https://picsum.photos/400/300?random=5"
 },
 {
-    categories: [Categories.SoapBars],
+    categories: [Categories.Soap],
     description: "It's a bar of soap, neat!",
     name: "Soap On the Rocks",
     notes: [ScentNotes.Sweet, ScentNotes.Fresh],
@@ -75,7 +75,7 @@ const dummyProducts: Product[] = [{
     thumbnail: "https://picsum.photos/400/300?random=6"
 },
 {
-    categories: [Categories.SoapBars],
+    categories: [Categories.Soap],
     description: "It's a bar of soap, neat!",
     name: "Soap On the Rocks",
     notes: [ScentNotes.Sweet, ScentNotes.Fresh],
@@ -84,7 +84,7 @@ const dummyProducts: Product[] = [{
     thumbnail: "https://picsum.photos/400/300?random=7"
 },
 {
-    categories: [Categories.SoapBars],
+    categories: [Categories.Soap],
     description: "It's a bar of soap, neat!",
     name: "Soap On the Rocks",
     notes: [ScentNotes.Sweet, ScentNotes.Fresh],
@@ -93,7 +93,7 @@ const dummyProducts: Product[] = [{
     thumbnail: "https://picsum.photos/400/300?random=8"
 },
 {
-    categories: [Categories.SoapBars],
+    categories: [Categories.Soap],
     description: "It's a bar of soap, neat!",
     name: "Soap On the Rocks",
     notes: [ScentNotes.Sweet, ScentNotes.Fresh],
@@ -102,7 +102,7 @@ const dummyProducts: Product[] = [{
     thumbnail: "https://picsum.photos/400/300?random=9"
 },
 {
-    categories: [Categories.SoapBars],
+    categories: [Categories.Soap],
     description: "It's a bar of soap, neat!",
     name: "Soap On the Rocks",
     notes: [ScentNotes.Sweet, ScentNotes.Fresh],
@@ -111,7 +111,7 @@ const dummyProducts: Product[] = [{
     thumbnail: "https://picsum.photos/400/300?random=10"
 },
 {
-    categories: [Categories.SoapBars],
+    categories: [Categories.Soap],
     description: "It's a bar of soap, neat!",
     name: "Soap On the Rocks",
     notes: [ScentNotes.Sweet, ScentNotes.Fresh],
@@ -120,7 +120,7 @@ const dummyProducts: Product[] = [{
     thumbnail: "https://picsum.photos/400/300?random=11"
 },
 {
-    categories: [Categories.SoapBars],
+    categories: [Categories.Soap],
     description: "It's a bar of soap, neat!",
     name: "Soap On the Rocks",
     notes: [ScentNotes.Sweet, ScentNotes.Fresh],
@@ -129,7 +129,7 @@ const dummyProducts: Product[] = [{
     thumbnail: "https://picsum.photos/400/300?random=12"
 },
 {
-    categories: [Categories.SoapBars],
+    categories: [Categories.Soap],
     description: "It's a bar of soap, neat!",
     name: "Soap On the Rocks",
     notes: [ScentNotes.Sweet, ScentNotes.Fresh],
@@ -138,7 +138,7 @@ const dummyProducts: Product[] = [{
     thumbnail: "https://picsum.photos/400/300?random=13"
 },
 {
-    categories: [Categories.SoapBars],
+    categories: [Categories.Soap],
     description: "It's a bar of soap, neat!",
     name: "Soap On the Rocks",
     notes: [ScentNotes.Sweet, ScentNotes.Fresh],
@@ -147,7 +147,7 @@ const dummyProducts: Product[] = [{
     thumbnail: "https://picsum.photos/400/300?random=14"
 },
 {
-    categories: [Categories.SoapBars],
+    categories: [Categories.Soap],
     description: "It's a bar of soap, neat!",
     name: "Soap On the Rocks",
     notes: [ScentNotes.Sweet, ScentNotes.Fresh],
@@ -156,7 +156,7 @@ const dummyProducts: Product[] = [{
     thumbnail: "https://picsum.photos/400/300?random=15"
 },
 {
-    categories: [Categories.SoapBars],
+    categories: [Categories.Soap],
     description: "It's a bar of soap, neat!",
     name: "Soap On the Rocks",
     notes: [ScentNotes.Sweet, ScentNotes.Fresh],

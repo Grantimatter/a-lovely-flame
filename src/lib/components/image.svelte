@@ -18,11 +18,12 @@
 	}
 </script>
 
-<div class="h-full w-full" class:animate-pulse={!loaded}>
+<div class="h-full w-full">
 	<img
 		{src}
 		{alt}
 		in:fade={{ duration: 250, delay: 250 }}
+    out:fade={{duration: 250}}
 		class:loaded
 		bind:this={thisImage}
 		loading="lazy"

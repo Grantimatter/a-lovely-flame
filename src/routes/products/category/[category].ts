@@ -6,14 +6,17 @@ export async function GET({ params }) {
 
     const category = params.category;
 
-	 const products = getProducts.filter((element) => {
-	    const incat = Categories[params.category];
-	    const outcats = element.categories;
-	    return outcats.includes(incat);
+	 const products = getProducts.filter((product) => {
+	    const incat: string = params.category.toLowerCase();
+	    const outcats = Object.values(product.categories);
+
+		return outcats.some(cat => {
+			return incat == Categories[cat].toLowerCase();
+		});
 	});
 
 	if (!params.category) {
-        console.debug("No category param")
+        console.debug("No category param");
 		return {
 			status: 404,
 		};
@@ -23,7 +26,7 @@ export async function GET({ params }) {
 		status: 200,
 		body: {
 			products,
-            category
+			category
 		},
 	};
 }
