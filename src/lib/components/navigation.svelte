@@ -39,6 +39,26 @@
 					{/each}
 				</ul>
 			</li>
+			<li>
+				<a href="/saftey">
+					Candle Safety
+				</a>
+			</li>
+			<li>
+				<a href="/blog">
+					Blog
+				</a>
+			</li>
+			<li>
+				<a href="/story">
+					Our Story
+				</a>
+			</li>
+			<li>
+				<a href="/FAQ">
+					FAQ
+				</a>
+			</li>
 		</ul>
 	</div>
 
