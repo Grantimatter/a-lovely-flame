@@ -7,7 +7,7 @@
 </script>
 
 <a
-	class="card card-compact hover:scale-110 border-secondary duration-200 bg-neutral shadow-lg hover:shadow-2xl cursor-pointer"
+	class="card card-compact hover:scale-110 hover:ring-primary hover:ring-2 border-secondary duration-200 bg-neutral shadow-lg hover:shadow-2xl cursor-pointer"
 	href={productUri}
 >
 	<figure class="w-96 h-72 bg-base-200 content-center">
