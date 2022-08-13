@@ -1,6 +1,6 @@
 <script lang="ts">
   import ProductList from "$lib/components/productList.svelte";
-  import { products } from '$lib/stores';
+  import { products } from '$lib/stores/productStore';
 </script>
 
 <svelte:head>

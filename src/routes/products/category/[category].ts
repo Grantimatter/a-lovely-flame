@@ -1,5 +1,5 @@
-import { Categories } from '$lib/product';
-import { getProducts } from '$lib/stores';
+import { Categories } from '$lib/Product';
+import { getProducts } from '$lib/stores/productStore';
 
 /** @type {import('./__types/[category]').RequestHandler} */
 export async function GET({ params }) {

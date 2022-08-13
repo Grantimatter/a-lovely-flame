@@ -1,9 +1,9 @@
-import { Categories } from '$lib/product';
-import { getProducts } from '$lib/stores';
+import { getProducts } from '$lib/stores/productStore';
 
 /** @type {import('./__types/[sku]').RequestHandler} */
 export async function GET({ params }) {
-	let product = getProducts.find((p) => p.sku == params.sku);
+	const sku: string = params.sku;
+	const product = getProducts.find((p) => p.sku.toLowerCase() == sku.toLowerCase());
 
 	if (!product) {
 		return {
