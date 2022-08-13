@@ -1,5 +1,5 @@
 import { writable } from "svelte/store";
-import { ScentNotes, Categories, type Product } from "./product";
+import { ScentNotes, Categories, type Product } from "../Product";
 
 function createProducts() {
     const {subscribe, set, update} = writable<Product[]>(dummyProducts);
