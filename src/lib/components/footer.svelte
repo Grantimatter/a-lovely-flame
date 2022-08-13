@@ -1,4 +1,4 @@
-<footer class="footer p-10 bg-neutral text-base-content">
+<footer class="footer p-10 bg-neutral text-base-content justify-around flex flex-wrap gap-8">
   <div>
     <span class="footer-title">Services</span>
     <a href="." class="link link-hover">Branding</a>

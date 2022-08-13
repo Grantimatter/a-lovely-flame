@@ -5,7 +5,13 @@
 	import MainMenu from '../lib/components/navigation.svelte';
 </script>
 
-<Header />
-<MainMenu />
-<slot />
-<Footer />
+<div class="flex flex-col justify-between min-h-screen">
+	<div>
+		<Header />
+		<MainMenu />
+	</div>
+	<div class="flex items-center justify-center" style="min-height: 65vh;">
+		<slot />
+	</div>
+	<Footer />
+</div>

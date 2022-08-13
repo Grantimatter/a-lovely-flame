@@ -1,9 +1,10 @@
 <script lang="ts">
-	import { type Product, ScentNotes, Categories } from '../product';
+
+	import { type Product, ScentNotes, Categories } from '../Product';
 	import ImageLoader from './imageLoader.svelte';
 
 	export let product: Product;
-	const productUri: string = `/products/${product.sku}`;
+	const productUri: string = `/products/${product.sku.toLowerCase()}`;
 
 	function spaceCamel(input: string): string {
 		return input.replace(/([A-Z])/g, ' $1').trim()

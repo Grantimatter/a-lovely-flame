@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Product } from '$lib/product';
+	import type { Product } from '$lib/Product';
 	import ProductCard from '$lib/components/productCard.svelte';
 	export let productList: Product[];
 </script>

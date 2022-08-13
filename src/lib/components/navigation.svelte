@@ -1,73 +1,21 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
-	import { fade } from 'svelte/transition';
-	import { Categories } from '$lib/product';
+	import Search from '$lib/components/search.svelte';
+	import SiteMenu from './siteMenu.svelte';
 
 	const avatar: string = 'https://placeimg.com/80/80/people';
-
-	const categories: string[] = Object.values(Categories).slice(0, Object.keys(Categories).length / 2);
-
-	function searchClicked() {
-		goto('/search');
-	}
-
-	function spaceCamel(input: string): string {
-		return input.replace(/([A-Z])/g, ' $1').trim()
-	}
 </script>
 
+<svelte:head>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</svelte:head>
+
 <div class="navbar bg-base-200">
-	<div class="navbar-start" />
 
-	<div class="navbar-center hidden lg:flex">
-		<ul tabindex="0" class="menu menu-horizontal p-0">
-			<li><a href="/">Home</a></li>
-			<li tabindex="0">
-				<a href="/products">
-					Products
-					<svg
-						class="fill-current"
-						xmlns="http://www.w3.org/2000/svg"
-						width="20"
-						height="20"
-						viewBox="0 0 24 24"
-						><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg
-					>
-				</a>
-				<ul
-					class="p-2 bg-base-200 z-[50] border-primary border-2 border-opacity-75"
-					transition:fade
-				>
-					{#each categories as category}
-						<li><a href={`/products/category/${category.toLowerCase()}`}>{spaceCamel(category)}</a></li>
-					{/each}
-				</ul>
-			</li>
-			<li>
-				<a href="/blog">
-					Blog
-				</a>
-			</li>
-			<li>
-				<a href="/story">
-					Our Story
-				</a>
-			</li>
-			<li>
-				<a href="/faq">
-					FAQ
-				</a>
-			</li>
-		</ul>
-	</div>
+	<SiteMenu />
 
-	<div class="navbar-end gap-2">
-		<div class="form-control relative w-72">
-			<input type="text" placeholder="Search" class="input input-bordered" />
-			<button on:click={searchClicked} class="btn btn-primary absolute top-0 right-0 rounded-l-none"
-				>Go!</button
-			>
-		</div>
+	<div class="navbar-end">
+
+		<Search />
 
 		<div class="dropdown dropdown-end">
 			<label for="cart-size" tabindex="0" class="btn btn-ghost btn-circle">
