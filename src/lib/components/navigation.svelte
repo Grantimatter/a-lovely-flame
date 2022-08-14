@@ -6,15 +6,13 @@
 </script>
 
 <svelte:head>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 </svelte:head>
 
 <div class="navbar bg-base-200">
-
 	<SiteMenu />
 
 	<div class="navbar-end">
-
 		<Search />
 
 		<div class="dropdown dropdown-end">
@@ -53,7 +51,9 @@
 		<div class="dropdown dropdown-end">
 			<label for="avatar" tabindex="0" class="btn btn-ghost btn-circle avatar">
 				<div id="avatar" class="w-10 rounded-full">
-					<img src={avatar} alt="profile avatar" />
+					<a href="/login">
+						<img src={avatar} alt="profile avatar" />
+					</a>
 				</div>
 			</label>
 		</div>

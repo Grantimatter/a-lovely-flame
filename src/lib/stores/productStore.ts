@@ -1,6 +1,6 @@
 import type { Product } from "$lib/Product";
 import { writable } from "svelte/store";
-import { getProducts } from '../utility/firebase/getData';
+import { getProducts } from '../utility/firebase/firestoreHandler';
 
 async function createProducts() {
 	const { subscribe, set, update } = writable<Product[]>(await getProducts());
