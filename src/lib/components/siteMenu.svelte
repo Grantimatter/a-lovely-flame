@@ -1,9 +1,7 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
-	import { Categories } from '$lib/Product';
 	import { spaceCamel } from '$lib/utility/stringHelper';
 
-	const categories = Object.values(Categories).slice(0, Object.keys(Categories).length / 2);
 </script>
 
 <div class="navbar-start">
@@ -32,11 +30,11 @@
 					class="p-2 bg-base-200 z-[50] border-primary border-2 border-opacity-75"
 					transition:fade
 				>
-					{#each categories as category}
+					<!-- {#each categories as category}
 						<li>
 							<a href={`/products/category/${category.toLowerCase()}`}>{spaceCamel(category)}</a>
 						</li>
-					{/each}
+					{/each} -->
 				</ul>
 			</li>
 			<li>

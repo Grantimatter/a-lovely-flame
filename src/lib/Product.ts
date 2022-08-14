@@ -1,30 +1,17 @@
+export interface Product {
+	name: string;
+	price: number;
+	description: string;
+	notes: string[];
+	thumbnail?: string;
+	sku: string;
+	categories: string[];
+}
 
-  export interface Product {
-    name: string;
-    price: number;
-    description: string;
-    notes: ScentNotes[];
-    thumbnail?: string;
-    sku: string;
-    categories: Categories[];
-  }
+export interface Categories {
+	name: string;
+}
 
-  export enum Categories {
-    Candles,
-    BathSoaks,
-    Soap,
-  }
-
-  export enum ScentNotes {
-    Fruity, 
-    Musky,
-    Floral,
-    Sweet,
-    Masculine,
-    Earthy,
-    Foody,
-    Fresh,
-    Citrus,
-    Spicy,
-    Gourmand
-  }
+export interface ScentNotes {
+	name: string;
+}

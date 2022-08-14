@@ -1,20 +1,13 @@
-import { getProducts } from '$lib/stores/productStore';
+import { productList } from '$lib/stores/productStore';
 
 /** @type {import('./__types/[sku]').RequestHandler} */
 export async function GET({ params }) {
-	const sku: string = params.sku;
-	const product = getProducts.find((p) => p.sku.toLowerCase() == sku.toLowerCase());
-
-	if (!product) {
-		return {
-			status: 404,
-		};
-	}
+	const sku: string = (params.sku as string).toLowerCase();
 
 	return {
 		status: 200,
 		body: {
-			product,
+			sku
 		},
 	};
 }
