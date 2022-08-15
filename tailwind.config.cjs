@@ -39,7 +39,8 @@ module.exports = {
 			{
 				lovelyFlame: {
 					primary: '#fd7486',
-					secondary: '#fdba74',
+					secondary: '#ff8c61',
+					//secondary: '#fdba74',
 					accent: '#ebded2',
 					neutral: '#191D24',
 					'base-100': '#2A303C',
