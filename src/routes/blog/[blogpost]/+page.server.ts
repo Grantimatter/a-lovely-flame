@@ -1,21 +1,28 @@
 import { blogPostList } from '$lib/stores/blogStore';
+import type { PageServerLoad } from './$types';
 
-/** @type {import('./__types/[category]').RequestHandler} */
-export async function GET({ params }) {
-
-	 const postList = blogPostList;
-
-	if (!params.category) {
-        console.debug("No category param");
-		return {
-			status: 404,
-		};
-	}
+export const load: PageServerLoad = (data: any) => {
+	const postList = blogPostList;
 
 	return {
-		status: 200,
-		body: {
-			postList
-		},
-	};
+		postList: postList
+	}
 }
+
+// /** @type {import('./$types').PageServerLoad} */
+// export async function load({ params: data }) {
+
+// 	const postList = blogPostList;
+
+// 	if (!data.category) {
+//         console.debug("No category param");
+
+// 		return {
+// 			status: 404,
+// 		};
+// 	}
+
+// 	return {
+// 		//postList
+// 	};
+// }

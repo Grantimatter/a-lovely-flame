@@ -1,9 +1,12 @@
 <script lang="ts">
 	import { productList } from '$lib/stores/productStore';
-	export let sku: string;
+
+	export let data: any;
+	$: ({sku} = data);
 
 	const product = $productList.find(p => p.sku.toLocaleLowerCase() == sku.toLowerCase());
 </script>
+
 
 <svelte:head>
 	{#if product}

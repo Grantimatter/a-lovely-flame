@@ -1,32 +1,27 @@
-import { Categories } from '$lib/Product';
-import { getProductList } from '$lib/stores/productStore';
-
-/** @type {import('./__types/[category]').RequestHandler} */
-export async function GET({ params }) {
-
-    const category = params.category;
-
-	 const products = getProductList.filter((product) => {
-	    const incat: string = params.category.toLowerCase();
-	    const outcats = Object.values(product.categories);
-
-		return outcats.some(cat => {
-			return incat == Categories[cat].toLowerCase();
-		});
-	});
-
-	if (!params.category) {
-        console.debug("No category param");
-		return {
-			status: 404,
-		};
-	}
+import type { PageServerLoad } from './$types';
+export const load: PageServerLoad = (data: any) => {
+	console.debug(`Loading Categories page: ${data}`);
 
 	return {
-		status: 200,
-		body: {
-			products,
-			category
-		},
-	};
+		category: data
+	}
 }
+
+// /** @type {import('./$types').PageServerLoad} */
+// export async function load({ data }) {
+// 	const category = data.category;
+	
+// 	if (!data.category) {
+// 		console.debug('No category param');
+// 		throw new Error(
+
+// 		);
+// 		return {
+// 			status: 404,
+// 		};
+// 	}
+
+// 	return {
+// 		category
+// 	};
+// }

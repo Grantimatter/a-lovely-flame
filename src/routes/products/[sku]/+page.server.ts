@@ -1,13 +1,10 @@
 import { productList } from '$lib/stores/productStore';
 
-/** @type {import('./__types/[sku]').RequestHandler} */
-export async function GET({ params }) {
-	const sku: string = (params.sku as string).toLowerCase();
+/** @type {import('./$types').PageServerLoad} */
+export async function load({ data }) {
+	const sku: string = (data.sku as string).toLowerCase();
 
 	return {
-		status: 200,
-		body: {
-			sku
-		},
+		sku
 	};
 }

@@ -1,8 +1,8 @@
 <script lang="ts">
-	import type { Categories, Product } from '$lib/Product';
 	import ProductList from '$lib/components/productList.svelte';
-	export let products: Product[];
-	export let category: Categories;
+	export let data: any;
+
+	$: ({products, category} = data);
 </script>
 
 <svelte:head>

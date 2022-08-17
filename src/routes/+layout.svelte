@@ -10,7 +10,7 @@
 		<Header />
 		<MainMenu />
 	</div>
-	<div class="flex items-center justify-center" style="min-height: 65vh;">
+	<div class="flex items-center justify-center">
 		<slot />
 	</div>
 	<Footer />

@@ -4,6 +4,10 @@ import { getFirestore } from 'firebase/firestore';
 import { getAuth } from 'firebase/auth';
 import { getPerformance} from 'firebase/performance';
 
+import { Firestore, collection, getDocs } from 'firebase/firestore';
+import type { Product } from "$lib/Product";
+import type { BlogPost } from "$lib/BlogPost";
+
 import {
 	onAuthStateChanged,
 	GoogleAuthProvider,
@@ -31,9 +35,9 @@ export async function signOutUser() {
     signOut(getAuth());
 }
 
-function initFirebaseAuth() {
-    onAuthStateChanged(getAuth(), authStateObserver);
-}
+// function initFirebaseAuth() {
+//     onAuthStateChanged(getAuth(), authStateObserver);
+// }
 
 function getProfilePicUrl() {
     return getAuth().currentUser?.photoURL || '/images/profile_placeholder.png'
@@ -47,15 +51,29 @@ function isUserSignedIn() {
     return !!getAuth().currentUser;
 }
 
-function authStateObserver(user) {
-    if (user) { // User is signed in!
-      // Get the signed-in user's profile pic and name.
-      let profilePicUrl = getProfilePicUrl();
-      let userName = getUserName();
+// function authStateObserver(user) {
+//     if (user) { // User is signed in!
+//       // Get the signed-in user's profile pic and name.
+//       let profilePicUrl = getProfilePicUrl();
+//       let userName = getUserName();
 
-    } else { // User is signed out!
-      // Hide user's profile and sign-out button.
+//     } else { // User is signed out!
+//       // Hide user's profile and sign-out button.
 
       
-    }
-  }
+//     }
+//   }
+
+export async function getProducts() {
+    const productsCol = collection(db, 'products');
+    const productSnapshot = await getDocs(productsCol);
+    const productList = productSnapshot.docs.map(doc => doc.data());
+    return productList as Product[];
+}
+
+export async function getBlogPosts() {
+    const postsCol = collection(db, 'blog');
+    const postsSnapshot = await getDocs(postsCol);
+    const postList = postsSnapshot.docs.map(doc => doc.data());
+    return postList as BlogPost[];
+}

@@ -1,13 +1,13 @@
 import type { Product } from "$lib/Product";
 import { writable } from "svelte/store";
-import { getProducts } from '../utility/firebase/firestoreHandler';
+import { getProducts } from '../utility/firebase/firebaseApp';
 
-async function createProducts() {
-	const { subscribe, set, update } = writable<Product[]>(await getProducts());
+function createProducts() {
+	const { subscribe, set, update } = writable<Product[]>([]);
 
 	return {
 		subscribe,
 		reset: () => set([])
 	};
 }
-export const productList = await createProducts();
+export const productList = createProducts();
