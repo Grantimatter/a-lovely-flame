@@ -1,7 +1,5 @@
 <script lang="ts">
-	import type { BlogPost } from '$lib/BlogPost';
 	import BlogPreview from '$lib/components/blog/blogPreview.svelte';
-
 	import { blogPostList } from '$lib/stores/blogStore';
 </script>
 

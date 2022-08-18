@@ -1,7 +1,7 @@
 import { firebaseConfig } from '../../../env';
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
-import { getAuth } from 'firebase/auth';
+import { getAuth, type User } from 'firebase/auth';
 import { getPerformance} from 'firebase/performance';
 
 import { Firestore, collection, getDocs } from 'firebase/firestore';
@@ -15,6 +15,8 @@ import {
 	signOut,
 } from 'firebase/auth';
 
+import { userStore } from '$lib/stores/userStore';
+
 console.debug("Initializing firebase app");
 
 // Init firebase
@@ -22,32 +24,41 @@ const app = initializeApp(firebaseConfig);
 // Get database for firebase project
 const db = getFirestore(app);
 // Get auth for firebase project
-const auth = getAuth(app);
+//const auth = getAuth(app);
 // Get performance for firebase project
-const performance = getPerformance(app);
+//const performance = getPerformance(app);
 
 export async function signIn() {
+    console.debug(`Trying to login`);
     const provider = new GoogleAuthProvider();
     await signInWithPopup(getAuth(), provider);
 }
 
 export async function signOutUser() {
     signOut(getAuth());
+    userStore.signOut();
 }
 
 // function initFirebaseAuth() {
 //     onAuthStateChanged(getAuth(), authStateObserver);
 // }
 
-function getProfilePicUrl() {
-    return getAuth().currentUser?.photoURL || '/images/profile_placeholder.png'
+export function getProfilePicUrl() {
+    return getAuth().currentUser?.photoURL || 'https://placeimg.com/80/80/people'
 }
 
-function getUserName() {
+export function getCurrentUser(): User | null {
+    return getAuth().currentUser;
+}
+
+export function getUserName() {
     return getAuth().currentUser?.displayName;
 }
 
-function isUserSignedIn() {
+export function isUserSignedIn() {
+    const loggedIn = !!getAuth().currentUser;
+    console.debug(`Logged in? ${loggedIn}`);
+    console.debug(`${!!getAuth().currentUser}`);
     return !!getAuth().currentUser;
 }
 
@@ -68,6 +79,7 @@ export async function getProducts() {
     const productsCol = collection(db, 'products');
     const productSnapshot = await getDocs(productsCol);
     const productList = productSnapshot.docs.map(doc => doc.data());
+    console.warn("Fetching from Firebase");
     return productList as Product[];
 }
 
@@ -75,5 +87,6 @@ export async function getBlogPosts() {
     const postsCol = collection(db, 'blog');
     const postsSnapshot = await getDocs(postsCol);
     const postList = postsSnapshot.docs.map(doc => doc.data());
+    console.warn("Fetching from Firebase");
     return postList as BlogPost[];
 }

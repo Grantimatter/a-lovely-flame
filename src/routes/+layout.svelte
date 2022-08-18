@@ -3,6 +3,13 @@
 	import Header from '../lib/components/header.svelte';
 	import Footer from '../lib/components/footer.svelte';
 	import MainMenu from '../lib/components/navigation.svelte';
+
+	import { userStore } from '$lib/stores/userStore';
+	import { onMount } from 'svelte';
+
+	onMount( async () => {
+		await userStore.checkSignIn();
+	});
 </script>
 
 <div class="flex flex-col justify-between min-h-screen">
@@ -10,7 +17,7 @@
 		<Header />
 		<MainMenu />
 	</div>
-	<div class="flex items-center justify-center">
+	<div style="min-height: 60vh;" class="flex items-center justify-center">
 		<slot />
 	</div>
 	<Footer />

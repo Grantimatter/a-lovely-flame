@@ -1,9 +1,13 @@
 import type { BlogPost } from "$lib/BlogPost";
 import { writable } from "svelte/store";
-import { getBlogPosts } from '../utility/firebase/firestoreHandler';
+import { getBlogPosts } from '../utility/firebase/firebaseApp';
 
-async function createBlogPosts() {
-	const { subscribe, set, update } = writable<BlogPost[]>();
+function createBlogPosts() {
+	const { subscribe, set, update } = writable<BlogPost[]>([]);
+
+	getBlogPosts().then((postList) => {
+		set(postList);
+	});
 
 	return {
 		subscribe,
