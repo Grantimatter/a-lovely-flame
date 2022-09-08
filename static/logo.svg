@@ -8,7 +8,7 @@
    version="1.0"
    id="svg449"
    sodipodi:docname="logo.svg"
-   inkscape:version="1.2.1 (ef4d3fba62, 2022-07-19, custom)"
+   inkscape:version="1.2.1 (2ed6d7ae0b, 2022-08-22, custom)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -24,9 +24,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
-     inkscape:zoom="256"
-     inkscape:cx="497.99023"
-     inkscape:cy="0.50585938"
+     inkscape:zoom="1"
+     inkscape:cx="178.5"
+     inkscape:cy="279.5"
      inkscape:window-width="1920"
      inkscape:window-height="1016"
      inkscape:window-x="0"
@@ -151,15 +151,6 @@
        x2="177.08893"
        y2="37.464996"
        gradientUnits="userSpaceOnUse" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3151"
-       id="linearGradient5660"
-       gradientUnits="userSpaceOnUse"
-       x1="176.99826"
-       y1="323.42941"
-       x2="177.08893"
-       y2="37.464996" />
   </defs>
   <g
      inkscape:groupmode="layer"
@@ -202,7 +193,7 @@
        fill-opacity="1"
        fill-rule="nonzero"
        id="Top_Heart"
-       style="display:inline;fill:#fd7486;fill-opacity:0.75;stroke:#000000;stroke-opacity:1"
+       style="display:inline;fill:#ffc0cb;fill-opacity:1;stroke:none;stroke-opacity:1;stroke-width:1.06941773;stroke-dasharray:none"
        transform="matrix(1.0660981,0,0,1.0439079,-0.6496539,-1.1295408)" />
     <path
        fill="#ff8c61"
@@ -210,17 +201,17 @@
        fill-opacity="1"
        fill-rule="nonzero"
        id="Bottom_Heart"
-       style="display:inline;fill:#ff8c61;fill-opacity:0.75;stroke:#000000;stroke-width:1.0003;stroke-dasharray:none;stroke-opacity:1"
+       style="display:inline;mix-blend-mode:multiply;fill:#faa94a;fill-opacity:0.5;stroke:none;stroke-width:1.06942;stroke-dasharray:none;stroke-opacity:1"
        transform="matrix(1.0660981,0,0,1.0438952,-0.6746399,34.779864)" />
     <path
        id="Heart_Intersection"
-       style="display:inline;opacity:1;fill:url(#linearGradient5660);fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.00029;stroke-dasharray:none;stroke-opacity:1"
+       style="display:none;opacity:1;mix-blend-mode:darken;fill:#ff8097;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.06942;stroke-dasharray:none;stroke-opacity:1"
        d="M 176.47887,37.728807 150.98112,60.840019 C 99.763192,107.31486 58.397542,144.8499 32.110236,180.69558 58.397508,216.54154 99.762757,254.07754 150.98112,300.55113 l 25.49775,23.11121 c 0.002,-0.002 0.004,-0.004 0.006,-0.006 0.002,0.002 0.004,0.004 0.005,0.006 l 25.495,-23.11121 C 253.20545,254.07754 294.57082,216.54154 320.8585,180.69558 294.57078,144.8499 253.20501,107.31486 201.98487,60.840019 l -25.495,-23.111212 c -0.002,0.002 -0.004,0.0036 -0.005,0.0056 -0.002,-0.002 -0.004,-0.0036 -0.006,-0.0056 z"
        transform="matrix(1.0660981,0,0,1.0439079,-0.6496539,-1.1295408)" />
   </g>
   <g
      id="Flame"
-     style="display:inline;stroke-width:1.5;stroke-dasharray:none"
+     style="display:inline;mix-blend-mode:normal;stroke-width:1.5;stroke-dasharray:none"
      transform="matrix(0.99716091,0,0,0.99720782,0.53393084,0.52367703)">
     <path
        fill="#fd7486"
@@ -228,7 +219,7 @@
        fill-opacity="1"
        fill-rule="nonzero"
        id="Right_Flame"
-       style="display:inline;fill:#fd7486;fill-opacity:1;stroke:#000000;stroke-width:0.995913;stroke-dasharray:none;stroke-opacity:1"
+       style="display:inline;mix-blend-mode:normal;fill:#ffc0cb;fill-opacity:1;stroke:none;stroke-width:0.995913;stroke-dasharray:none;stroke-opacity:1"
        transform="matrix(1.1249196,0,0,1.1343339,-22.02916,-29.608678)" />
     <path
        fill="#f8554e"
@@ -236,14 +227,14 @@
        fill-opacity="1"
        fill-rule="nonzero"
        id="Middle_Flame"
-       style="display:inline;fill:#fc566b;fill-opacity:1;stroke:#000000;stroke-width:1.125;stroke-dasharray:none;stroke-opacity:1" />
+       style="display:inline;mix-blend-mode:normal;fill:#ffc0cb;fill-opacity:1;stroke:none;stroke-width:1.125;stroke-dasharray:none;stroke-opacity:1" />
     <path
        fill="#ff8c61"
        d="m 121.68359,163.23828 c -63.601559,80.59766 57.28907,87.52344 50.0586,134.92188 0,0 0.0117,-0.0156 0.0273,-0.0391 38.35938,-68.60547 -71.05469,-78.95312 -50.08594,-134.88281"
        fill-opacity="1"
        fill-rule="nonzero"
        id="Left_Flame"
-       style="display:inline;fill:#ff4c4c;fill-opacity:1;stroke:#000000;stroke-width:0.995913;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       style="display:inline;mix-blend-mode:normal;fill:#ffc0cb;fill-opacity:1;stroke:none;stroke-width:0.995913;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
        transform="matrix(1.1249196,0,0,1.1343339,-22.02916,-29.608678)" />
   </g>
 </svg>
