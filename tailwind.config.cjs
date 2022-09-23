@@ -38,10 +38,10 @@ module.exports = {
 			'winter',
 			{
 				lovelyFlame: {
-					primary: '#fd7486',
-					secondary: '#ff8c61',
+					primary: '#ffc0cbff',
+					secondary: '#faa94a80',
 					//secondary: '#fdba74',
-					accent: '#ebded2',
+					accent: '#fc9f83ff',
 					neutral: '#191D24',
 					'base-100': '#2A303C',
 					info: '#67e8f9',

@@ -1,8 +1,9 @@
 <script lang="ts">
+	import type { Product } from '$lib/Product';
 	import ImageLoader from './imageLoader.svelte';
 
 	export let data: any;
-	const productUri: string = `/products/${data.sku}`;
+	const productUri: string = `/products/${data.attributes.Slug}`;
 </script>
 
 <a
@@ -10,35 +11,24 @@
 	href={productUri}
 >
 	<figure class="w-96 h-72 content-center text-transparent">
-		<ImageLoader src="https://picsum.photos/400/300?random=0" alt="Thumbnail for {data.name}" />
+		{#if data.attributes.Thumbnail}
+			<ImageLoader
+			src="{`http://127.0.0.1:1337`}{data.attributes.Thumbnail.data.attributes.url}"
+			alt="Thumbnail for {data.attributes.Title}"
+		/>
+		{/if}
 	</figure>
 	<div class="card-body">
 		<div class="card-title flex justify-between">
 			<div class="w-16" />
-			<h2 class="bg-base-100 rounded-md px-2 py-1 justify-center self-center">{data.name}</h2>
-			<div class="badge badge-primary badge-sm p-3 mt-2">${data.price}</div>
+			<h2 class="bg-base-100 rounded-md px-2 py-1 justify-center self-center">
+				{data.attributes.Title}
+			</h2>
+			<div class="badge badge-primary badge-sm p-3 mt-2">${data.attributes.Price}</div>
 		</div>
 
 		<div class="card-content justify-center text-center p-2">
-			{data.description}
-		</div>
-		<div class="card-actions flex flex-wrap justify-start items-center">
-			{#if data.notes}
-				{#each data.notes as scentNote}
-					<div class="badge badge-secondary p-3 mt-2 font-semibold capitalize">
-						{scentNote}
-					</div>
-				{/each}
-			{/if}
-		</div>
-		<div class="mt-1 flex flex-wrap gap-2 justify-end">
-			{#if data.categories}
-				{#each data.categories as category}
-					<div class="badge badge-xs badge-ghost p-3 capitalized">
-						{category}
-					</div>
-				{/each}
-			{/if}
+			{data.attributes.Description}
 		</div>
 	</div>
 </a>

@@ -8,8 +8,4 @@ export const firebaseConfig = {
   measurementId: "G-FP24TH7044"
 };
 
-export const strapiUri = "http://127.0.0.1:1337/api/"
-
-export const strapiConfig = {
-  uri: "http://127.0.0.1:1337/api/"
-}
+export const strapiUri = "http://127.0.0.1:1337/api/";

@@ -38,9 +38,6 @@
 				</ul>
 			</li>
 			<li>
-				<a href="/blog"> Blog </a>
-			</li>
-			<li>
 				<a href="/story"> Our Story </a>
 			</li>
 			<li>

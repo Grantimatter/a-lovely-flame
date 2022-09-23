@@ -1,10 +1,8 @@
 import { firebaseConfig } from '../../../env';
 import { initializeApp } from 'firebase/app';
-import { getFirestore } from 'firebase/firestore';
-import { getAuth, type User } from 'firebase/auth';
 import { getPerformance} from 'firebase/performance';
 
-import { Firestore, collection, getDocs } from 'firebase/firestore';
+import { Firestore, getFirestore, collection, getDocs } from 'firebase/firestore';
 import type { Product } from "$lib/Product";
 import type { BlogPost } from "$lib/BlogPost";
 
@@ -13,6 +11,8 @@ import {
 	GoogleAuthProvider,
 	signInWithPopup,
 	signOut,
+    getAuth,
+    type User
 } from 'firebase/auth';
 
 import { userStore } from '$lib/stores/userStore';
@@ -74,7 +74,7 @@ export function isUserSignedIn() {
       
 //     }
 //   }
-
+/*
 export async function getProducts() {
     const productsCol = collection(db, 'products');
     const productSnapshot = await getDocs(productsCol);
@@ -90,3 +90,4 @@ export async function getBlogPosts() {
     console.warn("Fetching from Firebase");
     return postList as BlogPost[];
 }
+*/

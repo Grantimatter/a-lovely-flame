@@ -1,41 +1,31 @@
-<footer class="footer p-10 bg-neutral text-base-content justify-around flex flex-wrap gap-8">
-  <div>
-    <span class="footer-title">Services</span>
-    <a href="." class="link link-hover">Branding</a>
-    <a href="." class="link link-hover">Design</a>
-    <a href="." class="link link-hover">Marketing</a>
-    <a href="." class="link link-hover">Advertisement</a>
-  </div>
+<footer class="footer pt-6 pb-7 bg-neutral text-base-content justify-center flex flex-wrap gap-24">
   <div>
     <span class="footer-title">Company</span>
-    <a href="." class="link link-hover">About us</a>
+    <a href="." class="link link-hover">Our Story</a>
     <a href="." class="link link-hover">Contact</a>
-    <a href="." class="link link-hover">Jobs</a>
-    <a href="." class="link link-hover">Press kit</a>
   </div>
+
   <div>
-    <span class="footer-title">Legal</span>
-    <a href="." class="link link-hover">Terms of use</a>
-    <a href="." class="link link-hover">Privacy policy</a>
-    <a href="." class="link link-hover">Cookie policy</a>
-  </div>
-  <div>
-    <span class="footer-title">Newsletter</span>
+    <span class="footer-title label-text">Sign up for our newsletter!</span>
+
     <div class="form-control w-80">
-      <label class="label" for="email">
-        <span class="label-text">Enter your email address</span>
-      </label>
       <div class="relative">
-        <input
-          id="email"
-          type="text"
-          placeholder="username@site.com"
-          class="input input-bordered w-full pr-16"
-        />
-        <button class="btn btn-primary absolute top-0 right-0 rounded-l-none"
-          >Subscribe</button
-        >
+        <label for="signup-modal" class="btn btn-primary modal-button"
+          >Sign Up!
+        </label>
+        <input type="checkbox" id="signup-modal" class="modal-toggle"/>
+        <label for="signup-modal" class="modal cursor-pointer modal-bottom sm:modal-middle">
+          <iframe title="newsletter" class="w-full h-full sm:w-4/12 sm:h-4/6 max-w-5xl" src="https://cdn.forms-content.sg-form.com/a0fe7951-39df-11ed-88d6-f6226295fe4d"/>
+        </label>
+
       </div>
     </div>
   </div>
+
+  <div>
+    <span class="footer-title">Legal</span>
+    <a href="." class="link link-hover">Privacy Policy</a>
+    <a href="." class="link link-hover">Cookie Policy</a>
+  </div>
+  
 </footer>

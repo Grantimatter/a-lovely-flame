@@ -5,7 +5,7 @@
 </script>
 
 <div class="flex justify-center gap-16 m-12 flex-wrap">
-	{#if data}
+	{#if data && data.productList}
 		{#each data.productList as product, i}
 			<ProductCard data={product} />
 		{/each}
