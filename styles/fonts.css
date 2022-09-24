@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'Great Vibes';
+    font-style: normal;
+    font-weight: 500;
+    src: url('/fonts/GreatVibes-Regular.ttf'); /* IE9 Compat Modes */
+    src: 
+        /* Modern Browsers */ url('/fonts/GreatVibes-Regular.ttf') format('truetype')
+}

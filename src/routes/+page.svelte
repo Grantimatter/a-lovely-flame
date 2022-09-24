@@ -9,10 +9,10 @@
 
 <img src={logo} alt="A Lovely Flame Logo" class="w-40 m-8" />
 
-<p class="text-5xl" style="font-family: great vibes;">A Lovely Flame</p>
+<p class="text-5xl" style="font-family: Great Vibes;">A Lovely Flame</p>
 
 <div class="flex flex-col justify-center items-center sm:w-full lg:w-2/3">
-	<div class="card relative top-0 mt-12 self-center bg-primary text-primary-content rounded-b-none">
+	<div class="card relative top-0 mt-10 self-center bg-primary text-primary-content rounded-b-none">
 		<div class="card-body">
 			<h2 class="card-title place-self-center">Our Story</h2>
 			<p class="mt-4">
@@ -50,7 +50,7 @@
 		</div>
 		
 	</div>
-	<div class="relative w-full bg-neutral p-8 rounded-b-2xl mb-2">
+	<div class="relative w-full bg-neutral p-8 rounded-b-2xl mb-4">
 		<div class="flex flex-col justify-center items-center">
 			<span class="footer-title label-text">Sign up for our newsletter!</span>
 
