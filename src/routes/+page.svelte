@@ -12,8 +12,7 @@
 			<div class="hero-content text-center">
 				<div class="max-w-md">
 					<h1 class="text-5xl font-bold" style="font-family: Great Vibes">Hello There!</h1>
-					<p class="py-6">This is a candle business and we're really cool!</p>
-					<a class="btn btn-primary" href="/products">Check out our products!</a>
+					<a class="btn btn-primary" href="/story">Check out our story!</a>
 				</div>
 			</div>
 		</div>
