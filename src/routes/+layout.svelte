@@ -15,10 +15,8 @@
 <div class="flex flex-col justify-between min-h-screen">
 	<div>
 		<Header />
-		<MainMenu />
 	</div>
-	<div style="min-height: 60vh;" class="flex items-center justify-center">
+	<div style="min-height: 60vh;" class="flex flex-col items-center justify-center">
 		<slot />
 	</div>
-	<Footer />
 </div>

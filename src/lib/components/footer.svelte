@@ -1,15 +1,13 @@
 <footer class="footer pt-6 pb-7 bg-neutral text-base-content justify-center flex flex-wrap gap-24">
   <div>
-    <span class="footer-title">Company</span>
-    <a href="." class="link link-hover">Our Story</a>
-    <a href="." class="link link-hover">Contact</a>
+    
   </div>
 
-  <div>
+  <div class="flex flex-col justify-center items-center">
     <span class="footer-title label-text">Sign up for our newsletter!</span>
 
-    <div class="form-control w-80">
-      <div class="relative">
+    <div class="">
+      <div class="">
         <label for="signup-modal" class="btn btn-primary modal-button"
           >Sign Up!
         </label>
@@ -23,9 +21,7 @@
   </div>
 
   <div>
-    <span class="footer-title">Legal</span>
-    <a href="." class="link link-hover">Privacy Policy</a>
-    <a href="." class="link link-hover">Cookie Policy</a>
+    
   </div>
   
 </footer>
