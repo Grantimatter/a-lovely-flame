@@ -1,4 +1,4 @@
-import { firebaseConfig } from '../../../env';
+import { firebaseConfig } from './firebaseConfig';
 import { initializeApp } from 'firebase/app';
 import { getPerformance} from 'firebase/performance';
 

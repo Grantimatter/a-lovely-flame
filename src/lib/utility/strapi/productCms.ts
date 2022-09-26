@@ -1,12 +1,12 @@
-//import { strapiUri } from "$env/static/public"
 import type { Product } from "$lib/Product";
+import { variables } from "$lib/variables";
 
 export async function getAllProducts() {
     // // With SLUG localhost:1337/api/products?filters[sku][$eq]=can-six
     // const res = await fetch("http://localhost:1337/api/products");
     // return res.json();
 
-    return fetch("http://localhost:1337/api/products?populate=Thumbnail")
+    return fetch(`${variables.STRAPI_API_URL}/products?populate=Thumbnail`)
     .then(res => res.json())
-    .then(json => json.data)
+    .then(json => json.data);
 }
