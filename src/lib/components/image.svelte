@@ -9,13 +9,9 @@
 
 	onMount(() => {
 		thisImage.onload = () => {
-			setLoaded();
+			loaded = true;
 		};
 	});
-
-	async function setLoaded() {
-		loaded = true;
-	}
 </script>
 
 <div class="h-full w-full">
