@@ -12,7 +12,7 @@
 <p class="text-5xl" style="font-family: Great Vibes;">A Lovely Flame</p>
 
 <div class="flex flex-col justify-center items-center sm:w-full lg:w-2/3">
-	<div class="card relative top-0 mt-10 self-center bg-primary text-primary-content rounded-b-none">
+	<div class="card relative top-0 mt-10 self-center bg-primary text-neutral rounded-b-none">
 		<div class="card-body">
 			<h2 class="card-title place-self-center">Our Story</h2>
 			<p class="mt-4">
@@ -54,7 +54,7 @@
 		<div class="flex flex-col justify-center items-center">
 			<span class="footer-title label-text">Sign up for our newsletter!</span>
 
-			<label for="signup-modal" class="btn btn-primary modal-button">Sign Up!</label>
+			<label for="signup-modal" class="btn btn-primary modal-button text-neutral">Sign Up!</label>
 			<input type="checkbox" id="signup-modal" class="modal-toggle" />
 			<label for="signup-modal" class="modal cursor-pointer modal-bottom sm:modal-middle">
 				<iframe
