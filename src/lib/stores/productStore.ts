@@ -1,5 +1,5 @@
 import type { Product } from '$lib/Product';
-import { getAllProducts } from '$lib/utility/strapi/productCms';
+import { getAllProducts } from '$lib/utility/strapi/productsApi';
 import { writable } from 'svelte/store';
 
 function createProducts() {
