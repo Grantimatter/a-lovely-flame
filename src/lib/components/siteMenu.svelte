@@ -38,7 +38,7 @@
 				</ul>
 			</li>
 			<li>
-				<a href="/story"> Our Story </a>
+				<a href="/our-story"> Our Story </a>
 			</li>
 			<li>
 				<a href="/faq"> FAQ </a>
