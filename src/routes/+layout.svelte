@@ -1,16 +1,9 @@
 <script lang="ts">
 	import '$lib/global.css';
 	import '/styles/fonts.css';
-	import Header from '../lib/components/header.svelte';
-	import Footer from '../lib/components/footer.svelte';
+	import Header from '$components/header.svelte';
+	import Footer from '$components/footer.svelte';
 	import MainMenu from '../lib/components/navigation.svelte';
-
-	import { userStore } from '$lib/stores/userStore';
-	import { onMount } from 'svelte';
-
-	onMount( async () => {
-		await userStore.checkSignIn();
-	});
 </script>
 
 <div class="flex flex-col justify-between min-h-screen">

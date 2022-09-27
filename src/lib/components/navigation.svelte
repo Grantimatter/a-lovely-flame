@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Search from '$lib/components/search.svelte';
 	import SiteMenu from './siteMenu.svelte';
-	import { userStore } from '$lib/stores/userStore';
 </script>
 
 <svelte:head>
@@ -48,17 +47,14 @@
 		</div>
 
 		<div class="dropdown dropdown-end">
-			{#if $userStore}
 				<label for="avatar" tabindex="0" class="btn btn-ghost btn-circle avatar">
 					<div id="avatar" class="w-10 rounded-full">
 						<a href="/login">
-							<img src={$userStore.photoURL || ''} alt="profile avatar" />
+							
 						</a>
 					</div>
 				</label>
-			{:else}
 				<a href="/login" class="btn btn-ghost ml-4">Login</a>
-			{/if}
 		</div>
 	</div>
 </div>
