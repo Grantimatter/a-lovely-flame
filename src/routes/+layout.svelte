@@ -2,9 +2,6 @@
 	import '$lib/global.css';
 	import '/styles/fonts.css';
 	import Header from '../lib/components/header.svelte';
-	import Footer from '../lib/components/footer.svelte';
-	import MainMenu from '../lib/components/navigation.svelte';
-	import { onMount } from 'svelte';
 </script>
 
 <div class="flex flex-col justify-between min-h-screen">
