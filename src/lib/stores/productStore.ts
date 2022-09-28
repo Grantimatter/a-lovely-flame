@@ -6,8 +6,8 @@ function createProducts() {
 	const { subscribe, set, update } = writable<Product[]>([]);
 
 	getAllProducts().then(
-		(productList) => {
-			set(productList);
+		(res) => {
+			set(res)
 		}
 	);
 

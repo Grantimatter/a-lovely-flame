@@ -1,0 +1,43 @@
+<script lang="ts">
+	import type { Fragrances, Product } from '$lib/Product';
+	import { variables } from '$lib/variables';
+	import ImageLoader from './imageLoader.svelte';
+
+	export let data: any;
+    console.debug("Bundle DATA: ", data);
+	let bundle = data;
+    //let fragrances: Fragrances[];
+    //let products: Product[];
+	$: bundle = data;
+    //$: products = bundle.products.data;
+    //$: fragrances = bundle.fragrances.data;
+	
+	const productUri: string = `/products/bundles/${bundle.attributes.Slug}`;
+    console.debug("Bundle URI:", productUri);
+</script>
+
+<a
+	class="card card-compact w-96 h-96 hover:scale-110 hover:ring-primary hover:ring-2 border-secondary duration-200 bg-neutral shadow-lg hover:shadow-2xl cursor-pointer"
+	href={productUri}
+>
+	<figure class="w-96 h-72 content-center text-transparent">
+		{#if bundle.attributes.Thumbnail}
+			<ImageLoader
+				src="{variables.STRAPI_URL}{bundle.attributes.Thumbnail.data.attributes.url}"
+				alt="Thumbnail for {bundle.attributes.Name}}"
+			/>
+		{/if}
+	</figure>
+	<div class="card-body">
+		<div class="card-title flex justify-center">
+			<h2 class="bg-base-100 rounded-md px-2 py-1">
+				{bundle.attributes.Name}
+			</h2>
+			<!-- <div class="badge badge-primary badge-sm p-3 mt-2">${product.attributes.Price}</div> -->
+		</div>
+
+		<div class="card-content justify-center text-center p-2">
+			<!-- {fragrance.attributes.Summary} -->
+		</div>
+	</div>
+</a>

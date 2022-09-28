@@ -3,17 +3,13 @@
 	import SiteMenu from './siteMenu.svelte';
 </script>
 
-<svelte:head>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-</svelte:head>
-
-<div class="navbar bg-base-200">
+<div class="navbar bg-base-200 flex w-screen md:justify-between">
 	<SiteMenu />
 
-	<div class="navbar-end">
-		<Search />
+	<div class="navbar-end w-0 md:w-1/3 h-10">
+		<!-- <Search /> -->
 
-		<div class="dropdown dropdown-end">
+		<!-- <div class="dropdown dropdown-end">
 			<label for="cart-size" tabindex="0" class="btn btn-ghost btn-circle">
 				<div class="indicator">
 					<svg
@@ -45,7 +41,6 @@
 				</div>
 			</div>
 		</div>
-
 		<div class="dropdown dropdown-end">
 				<label for="avatar" tabindex="0" class="btn btn-ghost btn-circle avatar">
 					<div id="avatar" class="w-10 rounded-full">
@@ -55,6 +50,6 @@
 					</div>
 				</label>
 				<a href="/login" class="btn btn-ghost ml-4">Login</a>
-		</div>
-	</div>
+		</div>-->
+	</div> 
 </div>

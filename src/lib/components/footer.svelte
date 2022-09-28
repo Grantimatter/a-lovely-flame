@@ -1,8 +1,7 @@
 <footer class="footer pt-6 pb-7 bg-neutral text-base-content justify-center flex flex-wrap gap-24">
   <div>
     <span class="footer-title">Company</span>
-    <a href="." class="link link-hover">Our Story</a>
-    <a href="." class="link link-hover">Contact</a>
+    <a href="/our-story" class="link link-hover">About Us</a>
   </div>
 
   <div>
@@ -24,8 +23,9 @@
 
   <div>
     <span class="footer-title">Legal</span>
-    <a href="." class="link link-hover">Privacy Policy</a>
+    <a href="/legal/privay-policy" class="link link-hover">Privacy Policy</a>
     <a href="." class="link link-hover">Cookie Policy</a>
+    <a href="/legal/terms-of-service" class="link link-hover">Terms of Service</a>
   </div>
   
 </footer>

@@ -10,7 +10,9 @@ const config = {
 	kit: {
 		adapter: adapter(),
 		alias: {
-			$components: 'src/lib/components'
+			$src: 'src',
+			$components: 'src/lib/components',
+			$static: 'static'
 		}
 	}
 };

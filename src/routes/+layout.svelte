@@ -3,7 +3,7 @@
 	import '/styles/fonts.css';
 	import Header from '$components/header.svelte';
 	import Footer from '$components/footer.svelte';
-	import MainMenu from '../lib/components/navigation.svelte';
+	import MainMenu from '$components/navigation.svelte';
 </script>
 
 <div class="flex flex-col justify-between min-h-screen">

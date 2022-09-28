@@ -7,4 +7,4 @@
   <title>Products - A Lovely Flame</title>
 </svelte:head>
 
-<ProductList data={{productList: $productList}}></ProductList>
+<div>This page is for all products</div>
