@@ -51,3 +51,10 @@ export const total = derived(
         return total;
     }
 );
+
+export const cartProducts = derived(
+    cartStore,
+    $cartStore => {
+        return $cartStore.products;
+    }
+);

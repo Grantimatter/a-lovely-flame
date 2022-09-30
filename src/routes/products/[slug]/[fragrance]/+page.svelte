@@ -1,8 +1,8 @@
 <script lang="ts">
-  	import Cart from '$lib/model/Cart';
+	import Cart from '$lib/model/Cart';
 	import ProductCard from '$src/lib/components/productCard.svelte';
 	import type { Fragrances, Product } from '$src/lib/model/Product';
-  import { cartStore } from '$src/lib/stores/cartStore';
+	import { cartStore } from '$src/lib/stores/cartStore';
 	import { variables } from '$src/lib/variables';
 
 	export let data: Product;
@@ -16,15 +16,15 @@
 	function addToCart() {
 		cartStore.add(new Array(quantity).fill(product));
 	}
-    
-    function quantityChanged(input) {
-        console.log("VALUE:", input.data );
-        if (input.data <= 0) {
-            quantity = 1;
-            return;
-        }
-        quantity = input.data;
-    }
+
+	function quantityChanged(input) {
+		console.log('VALUE:', input.data);
+		if (input.data <= 0) {
+			quantity = 1;
+			return;
+		}
+		quantity = input.data;
+	}
 
 	//console.log('Product:', product);
 </script>
@@ -38,7 +38,7 @@
 			<div class="flex flex-col text-2xl items-center gap-2 w-2/3">
 				<img
 					class="rounded-2xl"
-					src="{product.attributes.Thumbnail.data.attributes.url}"
+					src={product.attributes.Thumbnail.data.attributes.url}
 					alt="Product thumbnail"
 				/>
 				<div>
@@ -73,9 +73,9 @@
                                 "
 							id="quantity"
 							placeholder="1"
-                            min=1
-                            max=20
-                            bind:value={quantity}
+							min="1"
+							max="20"
+							bind:value={quantity}
 						/>
 					</div>
 					<div class="text-center mt-2">
