@@ -21,7 +21,8 @@ export default class Cart {
      */
     public static async getCurrentCart(): Promise<Cart> {
         const user = await getUser();
-        const products = (await Cart.fetchCart(user)).products;
+        const cart = await Cart.fetchCart(user);
+        const products = cart.products;
         return new Cart(user, products);
     }
 

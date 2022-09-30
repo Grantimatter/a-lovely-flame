@@ -41,7 +41,7 @@ function createCartStore() {
     }
 }
 
-export const  cartStore = createCartStore();
+export const cartStore = createCartStore();
 
 export const total = derived(
     cartStore,
