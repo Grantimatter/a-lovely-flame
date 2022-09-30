@@ -1,10 +1,10 @@
 <script lang="ts">
-  import ProductList from "$lib/components/productList.svelte";
-  import { productList } from "$lib/stores/productStore";
+	import { resolvePackageData } from 'vite';
+	import type { PageData } from './$types';
+
+	export let data: PageData;
 </script>
 
-<svelte:head>
-  <title>Products - A Lovely Flame</title>
-</svelte:head>
-
-<div>This page is for all products</div>
+<div>
+    This is the products page
+</div>

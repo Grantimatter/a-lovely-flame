@@ -13,23 +13,23 @@ export async function getAllProducts(): Promise<Product[]> {
 }
 
 export async function getProductLineItems(products: Product[]): Promise<LineItem[]> {
-    return fetch(`${variables.STRAPI_API_URL}/products?fields[0]=sku&fields[1]=line_item`)
+    return fetch(`${variables.STRAPI_API_URL}/products?fields[0]=Slug&fields[1]=line_item`)
     .then(res => res.json())
     .then(json => json.data)
     .then((data) => {
-        const fetchedProducts: Product[] = data.map((pr) => {
+        const fetchedProducts: Product[] = data.map((pr: any) => {
             return {
-                sku: pr.attributes.sku,
+                Slug: pr.attributes.Slug,
                 line_item: pr.attributes.line_item
             }
         });
-        console.log("Fetched products: ", fetchedProducts);
-        let line_items: LineItem[] =[];
+        
+        const line_items: LineItem[] =[];
         products.forEach((product: Product) => {
             fetchedProducts.forEach((fp: Product) => {
-                if (product.fullSku == fp.sku) {
+                if (product.Slug == fp.Slug) {
                     const item = line_items.find((i) => {
-                        if (i.price == fp.line_item) {
+                        if (i.Price == fp.line_item) {
                             i.quantity += 1;
                         return i;
                         }

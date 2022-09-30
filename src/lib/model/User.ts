@@ -25,14 +25,10 @@ function getGuestUser(): User {
 
     const userString = localStorage.getItem("user");
     if (!userString) return createGuestUser();
-
-    console.info ("GETTIING GUEST USER FROM STRING: ", JSON.stringify(userString));
     return JSON.parse(userString) as User;
 }
 
 function createGuestUser(): User {
-    console.debug("Creating user...");
-
     const user = new User(getDeviceId(), "guest");
     localStorage.setItem("user", JSON.stringify(user));
 
@@ -44,8 +40,6 @@ function getDeviceId(): string {
         const r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
         return v.toString(16);
     });
-
-    console.debug(`Created device id...\n${device}`)
 
     return device;
 }

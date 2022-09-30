@@ -1,8 +1,5 @@
 <script lang="ts">
-	import type { Fragrances, Product } from '$src/lib/model/Product';
 	import { cartStore } from '$src/lib/stores/cartStore';
-  import { variables } from '$src/lib/variables';
-  	import { onMount } from 'svelte';
 
 	export let data: any;
 	let bundle: any = data;
@@ -11,11 +8,10 @@
 	let quantity: number = 1;
 	$: bundle = data;
 	$: fragrance = bundle.fragrances.data[0];
-	$: console.info("bundle:", bundle );
 
 	function addToCart() {
 		let fullProduct = bundle;
-		fullProduct.fullSku = bundle.sku + "-" + fragrance.attributes.SKU;
+		fullProduct.fullSku = bundle.sku;
 		fullProduct.fragrance = fragrance;
 
 		cartStore.add(new Array(quantity).fill(bundle));

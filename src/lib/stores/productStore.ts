@@ -17,4 +17,4 @@ function createProducts() {
 	};
 }
 
-export const productList = createProducts();
+export const productStore = createProducts();

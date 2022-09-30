@@ -29,9 +29,7 @@ export default class Cart {
     public static async addToCart(products: Product[]): Promise<Cart>{
         // TODO Might be done?
         const cart = await this.getCurrentCart();
-        console.info("CART GROWING...", cart);
         cart.products = cart.products.concat(products);
-        console.info("Check Cart Bigger...", cart);
         // TODO PUSH CART TO API
         //cartStore.set(cart);
         return this.setLocalCart(cart);

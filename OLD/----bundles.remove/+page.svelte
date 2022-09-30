@@ -6,12 +6,12 @@
 	export let data: any;
 
 	let bundleList: any;
-	onMount(() => {
-		fetch(`${variables.STRAPI_API_URL}/bundles`)
-		.then(res => res.json())
-		.then(json => bundleList = json.data);
-	});
-</script>
+// 	onMount(() => {
+// 		fetch(`${variables.STRAPI_API_URL}/bundles`)
+// 		.then(res => res.json())
+// 		.then(json => bundleList = json.data);
+// 	});
+// </script>
 
 <svelte:head>
     <title>Bundles - A Lovely Flame</title>

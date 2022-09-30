@@ -1,6 +1,7 @@
 <script>
 	import instagram from '$src/instagram.svg';
 	import tiktok from '$src/tiktok.svg';
+	import facebook from '$src/facebook.svg';
 </script>
 
 <footer class="footer pt-6 pb-7 bg-neutral text-base-content justify-center flex flex-wrap gap-24">
@@ -30,12 +31,16 @@
 	<div class="w-1/4">
 		<span class="footer-title">Social Media</span>
 		<div class="flex flex-col lg:flex-row">
+      <a href="https://www.facebook.com/alovelyflameco" target="_blank"
+				><img src={facebook} class="scale-75 bg-primary rounded-xl" alt="Our Facebook" /></a
+			>
 			<a href="https://www.instagram.com/alovelyflameco" target="_blank"
 				><img src={instagram} class="scale-75 bg-primary rounded-xl" alt="Our Insagram" /></a
 			>
 			<a href="https://www.tiktok.com/@alovelyflameco" target="_blank"
 				><img src={tiktok} class="scale-75 bg-primary rounded-xl" alt="Our TikTok" /></a
 			>
+      
 		</div>
 	</div>
 

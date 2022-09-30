@@ -1,27 +1,24 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
-	import type { Product } from '../model/Product';
 	import { variables } from '../variables';
 	import logo from '$src/logo.svg';
 	import CartComponent from './cartComponent.svelte';
+	import ProductType from '$src/lib/model/ProductType';
 
-	let products: Product[] = [];
+	let productTypes: ProductType[] = [];
 
 	onMount(async () => {
-		fetch(`${variables.STRAPI_API_URL}/products/`)
+		fetch(`${variables.STRAPI_API_URL}/product-types/`)
 			.then((res) => res.json())
 			.then((json) => {
-				for (const product of json.data) {
-					products.push(product);
-					products = products;
-				}
+				productTypes = ProductType.createAllFromApi(json);
 			})
 			.catch((err) => console.error('Error retreiving products', err));
 	});
 </script>
 
-<div class="navbar bg-base-200 flex w-screen md:justify-between">
+<div class="navbar bg-base-200 flex w-screen md:justify-between align-middle items-center">
 	<div class="navbar-start w-1" />
 
 	<div class="navbar-center h-10 hidden md:flex justify-center">
@@ -44,19 +41,11 @@
 						class="p-2 bg-base-200 z-[50] border-primary border-2 border-opacity-75"
 						transition:fade
 					>
-						<li>
-							<a href="/products/bundles">Bundles</a>
-						</li>
-						{#each products as product}
+						{#each productTypes as type}
 							<li>
-								<a href={`/products/${product.attributes.Slug.toLowerCase()}`}
-									>{product.attributes.Plural}</a
-								>
+								<a href={`/products/${type.Slug.toLowerCase()}`}>{type.Plural}</a>
 							</li>
 						{/each}
-						<!-- <li>
-							<a href="/products/addons">Addons</a>
-						</li> -->
 					</ul>
 				</li>
 

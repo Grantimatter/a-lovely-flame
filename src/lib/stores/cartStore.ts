@@ -44,7 +44,7 @@ export const total = derived(
     cartStore,
     $cartStore => {
         let total = 0;
-        $cartStore.products.forEach(product => total += product.attributes.Price);
+        $cartStore.products.forEach(product => total += product.Price);
         return total;
     }
 );
