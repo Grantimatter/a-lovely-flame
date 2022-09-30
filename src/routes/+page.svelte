@@ -36,12 +36,6 @@
 				the history of who we are and where we come from.
 			</p>
 			<p class="mt-4">
-				Our mission at A Lovely Flame is simple. We want to inspire you to love yourself in brand
-				new ways. Self-care is a huge facet of how we show ourselves we care. For us, self-care is
-				learning to love all of our “less than pretty” parts of ourselves as well as dealing with
-				the history of who we are and where we come from.
-			</p>
-			<p class="mt-4">
 				Many of us are survivors of child abuse, whether we recognize it or not. The emotional
 				maltreatment that’s intrinsic to past eras of raising children can cause generational trauma
 				that seems impossible to escape from, but we can. It is our hope through our YouTube
