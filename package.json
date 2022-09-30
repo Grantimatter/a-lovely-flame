@@ -37,6 +37,8 @@
 	"type": "module",
 	"dependencies": {
 		"daisyui": "^2.22.0",
-		"firebase": "^9.9.2"
+		"dotenv": "^16.0.3",
+		"firebase": "^9.9.2",
+		"stripe": "^10.12.0"
 	}
 }

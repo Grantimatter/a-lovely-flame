@@ -14,33 +14,28 @@ function createCartStore() {
     const { subscribe, set, update } = writable<Cart>(defaultValue);
 
     return {
-        subscribe,
-        
-        add: (productList: Product[]) => {
-            if(browser) {
-                const cart = Cart.addToCart(productList).then((newCart) => set(newCart));
-                //set(cart);
-                //return cart;
-            }
-        },
+			subscribe,
 
-        clear: (cart: Cart) => {
-            if(browser) {
-                Cart.clearCart(cart);
-                set(defaultValue);
-                return defaultValue;
-            }
-        },
+			add: (productList: Product[]) => {
+				if (browser) {
+					Cart.addToCart(productList).then((newCart) => set(newCart));
+				}
+			},
 
-        // update: async (cart: Cart) => {
+			remove: (productList: Product) => {
+				if (browser) {
+					Cart.removeFromCart(productList).then((newCart) => set(newCart));
+				}
+			},
 
-        //     const newCart = await Cart.getCurrentCart();
-        //     update(() => {
-        //         return newCart;
-        //     });
-        //     return newCart;
-        // }
-    }
+			clear: (cart: Cart) => {
+				if (browser) {
+					Cart.clearCart(cart);
+					set(defaultValue);
+					return defaultValue;
+				}
+			}
+		};
 }
 
 export const cartStore = createCartStore();

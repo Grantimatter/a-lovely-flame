@@ -9,7 +9,7 @@
 
     <div class="form-control w-80">
       <div class="relative">
-        <label for="signup-modal" class="btn btn-primary modal-button"
+        <label for="signup-modal" class="btn btn-primary modal-button text-neutral"
           >Sign Up!
         </label>
         <input type="checkbox" id="signup-modal" class="modal-toggle"/>
@@ -24,7 +24,6 @@
   <div>
     <span class="footer-title">Legal</span>
     <a href="/legal/privay-policy" class="link link-hover">Privacy Policy</a>
-    <a href="." class="link link-hover">Cookie Policy</a>
     <a href="/legal/terms-of-service" class="link link-hover">Terms of Service</a>
   </div>
   

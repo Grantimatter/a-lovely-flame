@@ -19,10 +19,8 @@
 	href={productUri}
 >
 	<figure class="w-96 h-72 content-center text-transparent">
-		{#if bundle.attributes.Thumbnail}
-			<ImageLoader
-				src="{variables.STRAPI_URL}{bundle.attributes.Thumbnail.data.attributes.url}"
-				alt="Thumbnail for {bundle.attributes.Name}}"
+		{#if bundle.Thumbnail}
+		<img src={bundle.attributes.Thumbnail} />
 			/>
 		{/if}
 	</figure>

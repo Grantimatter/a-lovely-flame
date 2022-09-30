@@ -37,8 +37,19 @@ export default class Cart {
         return this.setLocalCart(cart);
     }
 
-    public static async removeFromCart(products: Product): Promise<Cart> {
+    public static async removeFromCart(product: Product): Promise<Cart> {
         const cart = await this.getCurrentCart();
+
+        //cart.products = cart.products.filter(p => p.fullSku !== product.fullSku);
+        let removedCount = 0;
+
+        cart.products = cart.products.filter((p) => {
+            if (removedCount < 1 && p.fullSku == product.fullSku) {
+                removedCount++;
+                return false;
+            }
+            return true;
+        });
 
         // TODO REMOVE PRODUCTS FROM CART
 
@@ -50,6 +61,7 @@ export default class Cart {
         
 
         // TODO SEND UPDATED CART TO API AND LOCAL
+        this.setLocalCart(cart);
         return cart;
     }
 

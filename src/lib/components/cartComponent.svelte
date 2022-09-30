@@ -24,7 +24,7 @@
 					/></svg
 				>
                 {#if $cartStore.products.length > 0}
-				    <span class="badge badge-sm indicator-item">{$cartStore.products.length}</span>
+				    <span class="badge badge-sm badge-primary indicator-item">{$cartStore.products.length}</span>
                 {/if}
 			</div>
 		</label>

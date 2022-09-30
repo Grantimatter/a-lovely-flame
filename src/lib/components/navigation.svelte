@@ -29,7 +29,7 @@
 			<ul tabindex="0" class="menu menu-horizontal p-0 h-10 flex flex-row justify-center">
 				<li><a href="/">Home</a></li>
 				<li tabindex="0">
-					<a href="/products">
+					<div class="cursor-default">
 						Products
 						<svg
 							class="fill-current"
@@ -39,7 +39,7 @@
 							viewBox="0 0 24 24"
 							><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg
 						>
-					</a>
+					</div>
 					<ul
 						class="p-2 bg-base-200 z-[50] border-primary border-2 border-opacity-75"
 						transition:fade
@@ -54,9 +54,9 @@
 								>
 							</li>
 						{/each}
-						<li>
+						<!-- <li>
 							<a href="/products/addons">Addons</a>
-						</li>
+						</li> -->
 					</ul>
 				</li>
 

@@ -1,10 +1,16 @@
 <script lang="ts">
 	import BundleCard from '$components/bundleCard.svelte';
+  import { variables } from '$src/lib/variables';
+  import { onMount } from 'svelte';
 
 	export let data: any;
 
 	let bundleList: any;
-	$: bundleList = data;
+	onMount(() => {
+		fetch(`${variables.STRAPI_API_URL}/bundles`)
+		.then(res => res.json())
+		.then(json => bundleList = json.data);
+	});
 </script>
 
 <svelte:head>

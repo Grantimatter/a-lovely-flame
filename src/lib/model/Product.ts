@@ -1,6 +1,12 @@
+import type { LineItem } from "../utility/strapi/productsApi";
+
 export interface Product {
     attributes: PurpleAttributes;
     meta: string;
+    fullSku: string;
+    sku: string;
+    fragrance: Fragrances;
+    line_item: LineItem
 }
 
 export interface ProductData {

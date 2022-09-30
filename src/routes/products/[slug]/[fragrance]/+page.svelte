@@ -1,9 +1,6 @@
 <script lang="ts">
-	import Cart from '$lib/model/Cart';
-	import ProductCard from '$src/lib/components/productCard.svelte';
 	import type { Fragrances, Product } from '$src/lib/model/Product';
 	import { cartStore } from '$src/lib/stores/cartStore';
-	import { variables } from '$src/lib/variables';
 
 	export let data: Product;
 
@@ -14,19 +11,13 @@
 	$: fragrance = product.attributes.Fragrances.data[0];
 
 	function addToCart() {
+		let fullProduct = product;
+		fullProduct.fullSku = product.attributes.sku + "-" + fragrance.attributes.SKU;
+		fullProduct.fragrance = fragrance;
+
 		cartStore.add(new Array(quantity).fill(product));
 	}
 
-	function quantityChanged(input) {
-		console.log('VALUE:', input.data);
-		if (input.data <= 0) {
-			quantity = 1;
-			return;
-		}
-		quantity = input.data;
-	}
-
-	//console.log('Product:', product);
 </script>
 
 <div class="bg-neutral p-8 rounded-2xl flex m-12 h-full w-1/2">
