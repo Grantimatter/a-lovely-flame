@@ -4,12 +4,14 @@ import { browser } from '$app/env';
 import Cart from '../model/Cart';
 import type { Product } from '../model/Product';
 
-const defaultValue = new Cart(new User("", ""), []);
-const initialValue = browser ? await Cart.getCurrentCart() : defaultValue;
-
-
 function createCartStore() {
-    const { subscribe, set, update } = writable<Cart>(initialValue);
+    const defaultValue = new Cart(new User("", ""), []);
+    
+    if (browser) {
+        Cart.getCurrentCart().then(cart => set(cart));
+    }
+
+    const { subscribe, set, update } = writable<Cart>(defaultValue);
 
     return {
         subscribe,

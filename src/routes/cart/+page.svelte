@@ -5,7 +5,7 @@
 
 <div>
     {#each $cartProducts as product}
-        <div class="">
+        <div class="text-xl">
             {product.attributes.Title} - ${product.attributes.Price}
         </div>
     {/each}
