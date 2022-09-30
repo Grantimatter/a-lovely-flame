@@ -1,6 +1,4 @@
-import type Cart from '$src/lib/model/Cart';
 import { json } from '@sveltejs/kit';
-import { secrets } from '$lib/secret';
 import type { RequestHandler } from './$types';
 import { getProductLineItems } from '$src/lib/utility/strapi/productsApi';
 import Stripe from 'stripe';

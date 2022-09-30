@@ -6,16 +6,17 @@ dotenv.config();
 
 /** @type {import('vite').UserConfig} */
 const config = {
-	plugins: [sveltekit(), stripe(process.env['STRIPE_SECRET_KEY'])],
+	plugins: [sveltekit(), 
+		stripe(process.env['STRIPE_SECRET_KEY'])],
 	server: {
 		fs: {
-			allow: ['styles']
-		}
+			allow: ['styles'],
+		},
 	},
-	
+
 	define: {
 		'process.env': process.env,
-	}
+	},
 };
 
 export default config;
