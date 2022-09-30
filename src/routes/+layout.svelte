@@ -13,6 +13,7 @@
 	</div>
 	<div style="min-height: 60vh;" class="flex items-center justify-center">
 		<slot />
+		
 	</div>
 	<Footer />
 </div>

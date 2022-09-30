@@ -1,12 +1,10 @@
 <script lang="ts">
 	import ProductList from '$lib/components/productList.svelte';
-	import type { Fragrances, Product } from '$lib/Product';
+	import type { Fragrances, Product } from '$lib/model/Product';
 	export let data: {fragrances: Fragrances[], product: Product};
 	
 	let {fragrances, product} = data;
 	$: ({fragrances, product} = data);
-
-	console.log(product);
 </script>
 
 <svelte:head>

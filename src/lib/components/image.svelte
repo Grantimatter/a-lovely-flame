@@ -14,7 +14,7 @@
 	});
 </script>
 
-<div class="h-full w-full">
+<div class="z-0">
 	<img
 		{src}
 		{alt}
@@ -23,5 +23,6 @@
 		class:loaded
 		bind:this={thisImage}
 		loading="lazy"
+		class="z-0"
 	/>
 </div>

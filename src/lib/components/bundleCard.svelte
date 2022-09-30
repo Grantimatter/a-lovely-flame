@@ -1,10 +1,9 @@
 <script lang="ts">
-	import type { Fragrances, Product } from '$lib/Product';
+	import type { Fragrances, Product } from '$lib/model/Product';
 	import { variables } from '$lib/variables';
 	import ImageLoader from './imageLoader.svelte';
 
 	export let data: any;
-    console.debug("Bundle DATA: ", data);
 	let bundle = data;
     //let fragrances: Fragrances[];
     //let products: Product[];
@@ -13,7 +12,6 @@
     //$: fragrances = bundle.fragrances.data;
 	
 	const productUri: string = `/products/bundles/${bundle.attributes.Slug}`;
-    console.debug("Bundle URI:", productUri);
 </script>
 
 <a

@@ -1,4 +1,4 @@
-import type { Product } from '$lib/Product';
+import type { Product } from '$lib/model/Product';
 import { getAllProducts } from '$lib/utility/strapi/productsApi';
 import { writable } from 'svelte/store';
 

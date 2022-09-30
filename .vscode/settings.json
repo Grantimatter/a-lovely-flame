@@ -1,0 +1,8 @@
+{
+    "workbench.editor.labelFormat": "medium",
+    "workbench.tree.indent": 16,
+    "workbench.tree.renderIndentGuides": "always",
+    "explorer.sortOrder": "filesFirst",
+    "explorer.compactFolders": false,
+    "workbench.iconTheme": "material-icon-theme"
+}

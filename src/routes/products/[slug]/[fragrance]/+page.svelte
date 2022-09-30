@@ -1,6 +1,8 @@
 <script lang="ts">
+  	import Cart from '$lib/model/Cart';
 	import ProductCard from '$src/lib/components/productCard.svelte';
-	import type { Fragrances, Product } from '$src/lib/Product';
+	import type { Fragrances, Product } from '$src/lib/model/Product';
+  import { cartStore } from '$src/lib/stores/cartStore';
 	import { variables } from '$src/lib/variables';
 
 	export let data: Product;
@@ -10,6 +12,10 @@
 	let quantity: number = 1;
 	$: product = data;
 	$: fragrance = product.attributes.Fragrances.data[0];
+
+	function addToCart() {
+		cartStore.add(new Array(quantity).fill(product));
+	}
     
     function quantityChanged(input) {
         console.log("VALUE:", input.data );
@@ -20,7 +26,7 @@
         quantity = input.data;
     }
 
-	console.log('Product:', product);
+	//console.log('Product:', product);
 </script>
 
 <div class="bg-neutral p-8 rounded-2xl flex m-12 h-full w-1/2">
@@ -32,7 +38,7 @@
 			<div class="flex flex-col text-2xl items-center gap-2 w-2/3">
 				<img
 					class="rounded-2xl"
-					src="{variables.STRAPI_URL}{product.attributes.Thumbnail.data.attributes.url}"
+					src="{product.attributes.Thumbnail.data.attributes.url}"
 					alt="Product thumbnail"
 				/>
 				<div>
@@ -81,9 +87,9 @@
 				{/if}
 				<div>
 					<h1 class="text-lg font-semibold">Why You'll Love It!</h1>
-					<p>{product.attributes.WhyLove}</p>
+					<p class="my-4">{product.attributes.WhyLove}</p>
 				</div>
-				<button class="btn btn-primary">
+				<button class="btn btn-primary" on:click={addToCart}>
 					Add To Cart <span class="badge badge-accent ml-1 py-3"
 						>${product.attributes.Price * quantity}</span
 					>

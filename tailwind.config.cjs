@@ -38,10 +38,10 @@ module.exports = {
 			'winter',
 			{
 				lovelyFlame: {
-					primary: '#ffc0cb',
-					secondary: '#faa94a',
+					primary: '#ffc0cbff',
+					secondary: '#faa94a80',
 					//secondary: '#fdba74',
-					accent: '#fc9f83',
+					accent: '#fc9f83ff',
 					neutral: '#191D24',
 					'base-100': '#2A303C',
 					info: '#67e8f9',
@@ -49,8 +49,14 @@ module.exports = {
 					warning: '#fde047',
 					error: '#f87171',
 
-					
-					'--text-primary-content': '#000000',
+					fontFamily: {
+						'sans': ['Julius Sans One','ui-sans-serif', 'system-ui'],
+						'serif': ['Julius Sans One', 'Georgia'],
+						'mono': ['ui-monospace', 'SFMono-Regular'],
+						'display': ['Julius Sans One'],
+						'body': ['"Julius Sans One"']
+					  },
+
 					'--rounded-box': '1rem', // border radius rounded-box utility class, used in card and other large boxes
 					'--rounded-btn': '0.5rem', // border radius rounded-btn utility class, used in buttons and similar element
 					'--rounded-badge': '1.9rem', // border radius rounded-badge utility class, used in badges and similar

@@ -9,7 +9,6 @@ export const load: PageLoad = async ({params}) => {
 	)
 		.then((res) => res.json())
 		.then((json) => {
-			console.debug(json.data[0].attributes.products.data);
 			const product = json.data[0].attributes.products.data.find(product => product.attributes.Slug == slug);
 			return {
 				fragrances: json.data,
