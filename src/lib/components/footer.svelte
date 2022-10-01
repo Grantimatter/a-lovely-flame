@@ -22,7 +22,7 @@
 					<label class="object-contain w-fit" for="">
 							<iframe
 						title="newsletter"
-						class="h-full w-full aspect-[300/581]"
+						class="h-full w-full aspect-[500/533]"
 						src="https://cdn.forms-content.sg-form.com/a0fe7951-39df-11ed-88d6-f6226295fe4d"
 					/>
 					</label>

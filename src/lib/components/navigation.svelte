@@ -18,10 +18,10 @@
 	});
 </script>
 
-<div class="navbar bg-base-200 flex w-screen md:justify-between align-middle items-center">
+<div class="navbar bg-base-200 flex w-screen md:justify-between align-middle items-center h-10">
 	<div class="navbar-start w-1" />
 	<div class="flex w-full md:hidden" />
-	<div class="navbar-center h-10 hidden md:flex justify-center">
+	<div class="navbar-center hidden md:flex">
 		<div class="">
 			<ul tabindex="0" class="menu menu-horizontal p-0 h-10 flex flex-row justify-center">
 				<li><a href="/">Home</a></li>

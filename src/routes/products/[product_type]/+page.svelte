@@ -11,7 +11,7 @@
 	} 
 </script>
 
-<div class="m-12 w-full h-full">
+<div class="flex flex-row justify-center flex-wrap gap-12 m-12 w-full h-full">
 	{#each attributes as product}
 		<ProductCard data={product.attributes} />
 	{/each}

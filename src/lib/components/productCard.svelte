@@ -8,7 +8,7 @@
 	}/${attributes.Slug.toLowerCase()}`;
 </script>
 
-<div class="w-full h-3/4 sm:h-1/2 md:w-1/2 lg:w-1/3 xl:w-1/5">
+<div class="w-full h-3/4 sm:h-1/2 md:w-2/5 lg:w-1/3 xl:w-1/5">
 	<a
 		class="card hover:scale-110 hover:ring-primary hover:ring-2 border-secondary duration-200 bg-neutral shadow-lg hover:shadow-2xl cursor-pointer"
 		href={productUri}

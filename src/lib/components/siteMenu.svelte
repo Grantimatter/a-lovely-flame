@@ -1,10 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { variables } from '$lib/variables';
-	import { fade } from 'svelte/transition';
 	import type { Product } from '$lib/model/Product';
-	import logo from '$src/logo.svg';
-	import { set_attributes } from 'svelte/internal';
 
 
 	let products: Product[] = [];
