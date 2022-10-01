@@ -1,8 +1,8 @@
-<div class="card p-6 bg-neutral w-full md:w-1/2 my-12 md:m-12">
+<div class="card p-6 bg-neutral w-full md:w-1/2 my-12 md:m-12 place-self-center">
 	<div class="card-body">
 		<div class="card-title">Privacy Policy</div>
-		<div class="card-content">
-			<p class="mt-4">
+		<div class="card-content w-full">
+			<div class="mt-4 prose lg:prose-lg w-full">
 				Terms of Service: Purchaser (“You”) agree to use all purchased products safely, according to
 				all directions and warnings provided by A Lovely Flame, and according to any and all
 				specifications and directions of manufacturer. A Lovely Flame sells its merchandise only to
@@ -16,8 +16,6 @@
 				WHATSOEVER ARISING OUT OF THE APPLICATION OR USE OF ANY PRODUCT. FURTHERMORE, A LOVELY FLAME
 				SHALL NOT BE RESPONSIBLE FOR ANY DAMAGE THAT MAY OCCUR DUE TO MISUSE OF ITS PRODUCTS OR
 				RELATED DIRECTLY OR INDIRECTLY WITH CANDLE BURNING.**
-			</p>
-			<p class="mt-4">
 				When you visit our website alovelyflame.com (the "Website"), and more generally, use any of
 				our services (the "Services", which include the Website), we appreciate that you are
 				trusting us with your personal information. We take your privacy very seriously. In this
@@ -29,16 +27,12 @@
 				(which, as described above, includes our Website), as well as, any related services, sales,
 				marketing or events. Please read this privacy notice carefully as it will help you
 				understand what we do with the information that we collect.
-			</p>
-			<p class="mt-4">
 				**FURTHERMORE, BY PURCHASING AND USING THIS PRODUCT, YOU SHALL AND DO HEREBY AGREE TO
 				INDEMNIFY AND HOLD A LOVELY FLAME FREE AND HARMLESS FROM ANY LIABILITY FOR INCIDENTAL OR
 				CONSEQUENTIAL DAMAGES, FROM ANY THIRD-PARTY CLAIMS FOR DAMAGES AGAINST THEIR PROPERTY, AND
 				FROM ANY LIABILITY WHATSOEVER ARISING OUT OF THE APPLICATION OR USE OF ANY PRODUCT.
 				FURTHERMORE, A LOVELY FLAME SHALL NOT BE RESPONSIBLE FOR ANY DAMAGE THAT MAY OCCUR DUE TO
 				MISUSE OF ITS PRODUCTS OR RELATED DIRECTLY OR INDIRECTLY WITH CANDLE BURNING.**
-			</p>
-			<p>
 				**TABLE OF CONTENTS** **1. WHAT INFORMATION DO WE COLLECT?** **2. HOW DO WE USE YOUR
 				INFORMATION?** **3. WILL YOUR INFORMATION BE SHARED WITH ANYONE?** **4. WHO WILL YOUR
 				INFORMATION BE SHARED WITH?** **5. DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?** **6.
@@ -299,7 +293,8 @@
 				authorized agent to make a request under the CCPA on your behalf. We may deny a request from
 				an authorized agent that does not submit proof that they have been validly authorized to act
 				on your behalf in accordance with the CCPA.
-			</p>
+				}
+			</div>
 		</div>
 	</div>
 </div>

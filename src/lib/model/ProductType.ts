@@ -7,7 +7,7 @@ export default class ProductType {
      * @param response API Response object holding the product type
      */
     public static createFromApi(attributes: any):  ProductType{
-        return new ProductType(attributes.Title, attributes.Plural, attributes.Slug, attributes.SortOder);
+        return new ProductType(attributes.Title, attributes.Plural, attributes.Slug, attributes.SortOrder);
     }
 
     /**

@@ -34,8 +34,18 @@
 				</h2>
 			</div>
 
+			
+
 			<div class="card-content justify-center text-center p-2">
-				<!-- {attributes.Fragrance.data.attributes.Summary} -->
+				{#if attributes.fragrance && attributes.fragrance.data}
+					<div class="mb-2">
+						{#each attributes.fragrance.data.attributes.scent_notes.data as scentNote}
+						<div class="badge badge-secondary font-semibold">{scentNote.attributes.Title}</div>
+						{/each}
+					</div>
+
+					{attributes.fragrance.data.attributes.Summary}
+				{/if}
 			</div>
 		</div>
 	</a>
