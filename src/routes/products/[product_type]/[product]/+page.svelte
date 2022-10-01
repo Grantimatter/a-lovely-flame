@@ -1,39 +1,50 @@
 <script lang="ts">
-    import type { Fragrances, Product } from '$src/lib/model/Product';
+	import type { Fragrances, Product } from '$src/lib/model/Product';
 	import { cartStore } from '$src/lib/stores/cartStore';
-    import type { PageData } from './$types';
-    
-    export let data: PageData;
+	import type { PageData } from './$types';
 
-    let product: Product = data[0].attributes;
-	let fragrance: Fragrances = product.Fragrances[0];
+	export let data: PageData;
+
 	let quantity: number = 1;
 	$: product = data[0].attributes;
-	$: fragrance = product.Fragrances[0];
+	$: fragrance = product.fragrance.data.attributes;
+	$: addons = product.Addons.data;
+
+	let addonsSelected: Product[] = [];
+	
+	$: addonPrice = () => {
+		let price = 0;
+		addonsSelected.forEach(a => price += a.attributes.Price);
+		return price;
+		};
 
 	function addToCart() {
-		cartStore.add(new Array(quantity).fill(product));
+		let addProdcucts = new Array(quantity).fill(product);
+		const selAdd = addonsSelected.map(addon => addon.attributes);
+
+		if (addonsSelected.length > 0) {
+			addProdcucts = addProdcucts.concat(addProdcucts, selAdd);
+		}
+
+		cartStore.add(addProdcucts);
 	}
 </script>
 
-<div class="bg-neutral p-8 rounded-2xl flex m-12 h-full w-full lg:w-5/12 lg:h-6/12">
+<div class="self-center bg-neutral p-8 rounded-2xl my-12 h-full w-full lg:w-8/12 xl:w-7/12">
 	{#if product}
-		<div class="flex flex-col justify-between md:flex-row gap-8 w-full">
-			<div class="flex flex-col text-2xl items-center gap-2 w-2/3">
+		<div class="flex flex-col justify-between md:flex-row gap-12 w-full">
+			<div class="flex flex-col text-2xl items-center gap-2 w-full md:w-2/3">
 				<img
 					class="rounded-2xl"
 					src={product.Thumbnail.data.attributes.url}
 					alt="Product thumbnail"
 				/>
-				<div>
-					{fragrance}
-				</div>
-				<div>
-					{product.Title}
-				</div>
 			</div>
-			<div class="flex flex-col bg-base-100 rounded-xl p-8 justify-between w-full xl:w-1/2">
+			<div class="flex flex-col bg-base-100 rounded-xl p-8 justify-between w-full xl:w-1/2 gap-12">
 				<div class="flex flex-col">
+					<div class="place-self-center mb-6 text-xl font-semibold">
+						{product.Title}
+					</div>
 					<div class="flex flex-row gap-2 text-2xl justify-center">
 						<h1>${product.Price}</h1>
 						<h1>x</h1>
@@ -44,7 +55,7 @@
                                   form-control
                                   block
                                   w-16
-                                  px-3
+                                  px-2
                                   py-1.5
                                   text-base
                                   font-normal
@@ -61,28 +72,48 @@
 							max="20"
 							bind:value={quantity}
 						/>
+						= ${product.Price * quantity}
 					</div>
-					<div class="text-center mt-2">
-						Total: ${product.Price * quantity}
+					{#if addons.length > 0}
+					<h1 class="mt-6 mb-3 text-xl font-semibold">Addons</h1>
+					<div id="addons" class="flex flex-row flex-wrap justify-center bg-neutral rounded-xl p-2 text-xl font-semibold items-center align-middle gap-2">
+						
+						{#each addons as addon}
+							<div class="flex flex-row gap-2 p-1">
+								{addon.attributes.Title} - ${addon.attributes.Price}
+								<input type="checkbox" bind:group={addonsSelected} value={addon}>
+							</div>
+						{/each}
+					</div>
+					{/if}
+				</div>
+				<div class="bg-neutral p-4 -m-4 rounded-xl">
+					{fragrance.Story}
+				</div>
+				<div class="mt-8 bg-neutral rounded-xl">
+					<div class="collapse collapse-arrow">
+						<input type="checkbox" checked />
+						<div class="collapse-title text-xl font-medium">Why You'll Love It!</div>
+						<div class="collapse-content bg-base-300">
+							<p class="pt-3">{product.WhyLove}</p>
+						</div>
+					</div>
+
+					<div class="collapse collapse-arrow">
+						<input type="checkbox" />
+						<div class="collapse-title text-xl font-medium">Usage</div>
+						<div class="collapse-content bg-base-300 rounded-b-xl">
+							<p class="pt-3">{product.Usage}</p>
+						</div>
 					</div>
 				</div>
-				{#if product.Addons}
-					<div class="flex flex-row gap-2">Addons -</div>
-				{/if}
-				<div>
-					<h1 class="text-lg font-semibold">Why You'll Love It!</h1>
-					<p class="my-4">{product.WhyLove}</p>
-				</div>
+
 				<button class="btn btn-primary" on:click={addToCart}>
-					Add To Cart <span class="badge badge-accent ml-1 py-3"
-						>${product.Price * quantity}</span
-					>
+					Add {quantity > 1 ? quantity : ''} To Cart
+					<span class="badge badge-accent ml-1 py-3">${product.Price * quantity + addonPrice()}</span>
 				</button>
 			</div>
 		</div>
-		<!-- <div class="m-12">
-			<ProductCard data={{ fragrance, product }} />
-		</div> -->
 	{:else}
 		<div>Product not found!</div>
 	{/if}

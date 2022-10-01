@@ -6,6 +6,8 @@
 	let productUri: string = `/products/${
 		attributes.product_type.data.attributes.Slug
 	}/${attributes.Slug.toLowerCase()}`;
+
+	console.info('Attr: ', attributes);
 </script>
 
 <div class="w-full h-3/4 sm:h-1/2 md:w-2/5 lg:w-1/3 xl:w-1/5">
@@ -33,7 +35,7 @@
 			</div>
 
 			<div class="card-content justify-center text-center p-2">
-				{attributes.Fragrances.data[0].attributes.Summary}
+				<!-- {attributes.Fragrance.data.attributes.Summary} -->
 			</div>
 		</div>
 	</a>

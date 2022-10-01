@@ -1,7 +1,3 @@
-<script language='ts'>
-
-</script>
-
 <svelte:head>
     <title>Thanks for shopping! - A Lovely Flame</title>
 </svelte:head>

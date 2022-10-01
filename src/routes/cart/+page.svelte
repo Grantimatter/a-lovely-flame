@@ -32,7 +32,7 @@
 	}
 </script>
 
-<div class="flex flex-col justify-center w-full sm:w-3/4 md:w-1/2 2xl:w-1/3 my-8 shadow-xl">
+<div class="flex flex-col justify-center self-center w-full m-2 sm:w-3/4 md:w-1/2 2xl:w-1/3 my-8 shadow-xl">
 	<div class="flex flex-col bg-neutral rounded-t-xl pb-8 gap-4">
 		<div class="flex flex-row justify-center px-8 pt-8 mb-4 underline gap-32">
 			<span class="">Product</span>

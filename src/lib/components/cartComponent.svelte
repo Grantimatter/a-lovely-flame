@@ -2,10 +2,6 @@
 	import {cartStore, total} from '$stores/cartStore';
 </script>
 
-<!-- <div>
-    {$cartStore.user.username}
-</div> -->
-
 <div class="flex-none">
 	<div class="dropdown dropdown-end">
 		<label tabindex="0" class="btn btn-ghost btn-circle">
@@ -31,7 +27,7 @@
 		<div tabindex="0" class="mt-3 card card-compact dropdown-content w-52 bg-neutral ring-primary ring-2 shadow">
             
 			<div class="card-body">
-                {#if $total > 0}
+                {#if $cartStore}
 				<span class="text-secondary">Subtotal: ${$total}</span>
 				<div class="card-actions">
 					<a href="/cart" class="btn btn-primary btn-block">View cart!</a>

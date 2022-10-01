@@ -7,6 +7,7 @@ const config = {
 		fs: {
 			allow: ['styles'],
 		},
+		host: "0.0.0.0"
 	}
 };
 

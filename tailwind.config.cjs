@@ -50,10 +50,10 @@ module.exports = {
 					error: '#f87171',
 
 					fontFamily: {
-						'sans': ['Julius Sans One','ui-sans-serif', 'system-ui'],
-						'serif': ['Julius Sans One', 'Georgia'],
+						'sans': ['"Julius Sans One"','ui-sans-serif', 'system-ui'],
+						'serif': ['"Julius Sans One"', 'Georgia'],
 						'mono': ['ui-monospace', 'SFMono-Regular'],
-						'display': ['Julius Sans One'],
+						'display': ['"Julius Sans On"e'],
 						'body': ['"Julius Sans One"']
 					  },
 

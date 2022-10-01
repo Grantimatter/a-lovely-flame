@@ -6,15 +6,20 @@
 
 <footer class="footer pt-6 pb-7 bg-neutral text-base-content justify-center flex flex-wrap gap-24">
 	<div class="w-1/8">
-		<span class="footer-title">Company</span>
-		<a href="/our-story" class="link link-hover">About Us</a>
+		<span class="footer-title place-self-center">Company</span>
+		<a href="/our-story" class="link link-hover place-self-center">About Us</a>
 	</div>
 
-	<div class="flex flex-col justify-center items-end w-1/4">
+	<div class="w-1/8 ">
+		<span class="footer-title place-self-center">Contact Us!</span>
+		<a href="/our-story" class="link link-hover">support@alovelyflame.com</a>
+	</div>
+
+	<div class="flex flex-col items-center">
 		<span class="footer-title label-text">Sign up for our newsletter!</span>
 
 		<div class="form-control">
-				<label for="signup-modal" class="btn btn-primary modal-button text-neutral self-center "
+				<label for="signup-modal" class="btn btn-primary modal-button text-neutral"
 					>Sign Up!
 				</label>
 				<input type="checkbox" id="signup-modal" class="modal-toggle" />
@@ -30,8 +35,8 @@
 		</div>
 	</div>
 
-	<div class="w-full justify-center md:w-1/4 m-4">
-		<span class="footer-title">Social Media</span>
+	<div class="w-full justify-center max-w-sm">
+		<span class="footer-title place-self-center">Social Media</span>
 		<div class="flex gap-2">
       <a href="https://www.facebook.com/alovelyflameco" target="_blank"
 				><img src={facebook} class="bg-primary rounded-xl" alt="Our Facebook" /></a
@@ -46,8 +51,8 @@
 		</div>
 	</div>
 
-	<div class="w-1/">
-		<span class="footer-title">Legal</span>
+	<div class="">
+		<span class="footer-title self-center">Legal</span>
 		<a href="/legal/privay-policy" class="link link-hover">Privacy Policy</a>
 		<a href="/legal/terms-of-service" class="link link-hover">Terms of Service</a>
 	</div>
