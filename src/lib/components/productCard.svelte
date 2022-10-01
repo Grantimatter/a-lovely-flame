@@ -7,7 +7,6 @@
 		attributes.product_type.data.attributes.Slug
 	}/${attributes.Slug.toLowerCase()}`;
 
-
 	$: product = data;
 	$: fragrances = data.Fragrances.data;
 </script>
@@ -45,8 +44,9 @@
 							{/each}
 						{/each}
 					</div>
-
-					{fragrances[0].attributes.Summary}
+					<div class="prose xl:prose-xl">
+						{@html fragrances[0].attributes.Summary}
+					</div>
 				{/if}
 			</div>
 		</div>

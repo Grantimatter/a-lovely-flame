@@ -93,15 +93,15 @@
 					</div>
 					{/if}
 				</div>
-				<div class="bg-neutral p-4 -m-4 rounded-xl">
-					{fragrance.Story}
+				<div class="bg-neutral p-4 -m-4 rounded-xl prose xl:prose-xl">
+					{@html fragrance.Story}
 				</div>
 				<div class="mt-8 bg-neutral rounded-xl">
 					<div class="collapse collapse-arrow">
 						<input type="checkbox" checked />
 						<div class="collapse-title text-xl font-medium">Why You'll Love It!</div>
 						<div class="collapse-content bg-base-300">
-							<p class="pt-3">{product.WhyLove}</p>
+							<p class="pt-3 prose xl:prose-xl">{@html product.WhyLove}</p>
 						</div>
 					</div>
 
@@ -109,7 +109,7 @@
 						<input type="checkbox" />
 						<div class="collapse-title text-xl font-medium">Usage</div>
 						<div class="collapse-content bg-base-300 rounded-b-xl">
-							<p class="pt-3">{product.Usage}</p>
+							<p class="pt-3 prose xl:prose-xl">{@html product.Usage}</p>
 						</div>
 					</div>
 				</div>
