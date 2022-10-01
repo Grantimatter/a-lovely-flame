@@ -9,7 +9,7 @@ export async function getAllProducts(): Promise<Product[]> {
     return fetch(`${variables.STRAPI_API_URL}/products?populate=Thumbnail`)
     .then(res => res.json())
     .then(json => json.data)
-    .catch(() => console.log("There was an error fetching the product"));
+    .catch(() => console.error("There was an error fetching the product"));
 }
 
 export async function getProductLineItems(products: Product[]): Promise<LineItem[]> {

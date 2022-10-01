@@ -17,33 +17,29 @@
 				<div class="carousel h-80">
 					
 					<div id="slide1" class="carousel-item relative w-full">
-					  <img src="https://res.cloudinary.com/dzaonwhkq/image/upload/v1664537131/medium_wick_trimmer_b164b957e9.jpg" class="w-full  object-contain" />
+					  <img src="https://res.cloudinary.com/dzaonwhkq/image/upload/v1664536344/medium_Candlejpg_3b40bdafd0.jpg" class="w-full object-contain" />
 					  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
 						<a href="#slide4" class="btn btn-circle">❮</a> 
 						<a href="#slide2" class="btn btn-circle">❯</a>
 					  </div>
 					</div> 
-					<div id="slide2" class="carousel-item relative w-full object-cover">
-					  <img src="https://res.cloudinary.com/dzaonwhkq/image/upload/v1664536575/soap_bag_da82050264.jpg" class="w-full" />
-					  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-						<a href="#slide1" class="btn btn-circle">❮</a> 
-						<a href="#slide3" class="btn btn-circle">❯</a>
+
+
+					<div id="slide2" class="carousel-item relative w-full">
+						<img src="https://res.cloudinary.com/dzaonwhkq/image/upload/v1664537469/Candlejpg_80a4ccbc19.jpg" class="w-full object-contain" />
+						<div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+						  <a href="#slide1" class="btn btn-circle">❮</a> 
+						  <a href="#slide3" class="btn btn-circle">❯</a>
+						</div>
+					  </div> 
+
+					  <div id="slide3" class="carousel-item relative w-full">
+						<img src="https://res.cloudinary.com/dzaonwhkq/image/upload/v1664537453/medium_bathsoak_16158d40c7.jpg" class="w-full object-contain" />
+						<div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+						  <a href="#slide2" class="btn btn-circle">❮</a> 
+						  <a href="#slide1" class="btn btn-circle">❯</a>
+						</div>
 					  </div>
-					</div> 
-					<div id="slide3" class="carousel-item relative w-full object-cover">
-					  <img src="https://placeimg.com/800/200/arch" class="w-full object-contain" />
-					  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-						<a href="#slide2" class="btn btn-circle">❮</a> 
-						<a href="#slide4" class="btn btn-circle">❯</a>
-					  </div>
-					</div> 
-					<div id="slide4" class="carousel-item relative w-full object-cover">
-					  <img src="https://placeimg.com/800/200/arch" class="w-full" />
-					  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-						<a href="#slide3" class="btn btn-circle">❮</a> 
-						<a href="#slide1" class="btn btn-circle">❯</a>
-					  </div>
-					</div>
 				  </div>
 			</div>
 

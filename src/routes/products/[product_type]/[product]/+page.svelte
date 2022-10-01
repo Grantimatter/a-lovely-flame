@@ -11,8 +11,6 @@
 	$: product = data[0].attributes;
 
 	$: fragrance = product.Fragrances.data[0].attributes;
-	$: console.info("fragrance: ", fragrance);
-
 	$: addons = product.Addons.data;
 
 
