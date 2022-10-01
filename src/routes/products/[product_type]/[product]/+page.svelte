@@ -5,10 +5,16 @@
 
 	export let data: PageData;
 
+
+
 	let quantity: number = 1;
 	$: product = data[0].attributes;
-	$: fragrance = product.fragrance.data.attributes;
+
+	$: fragrance = product.Fragrances.data[0].attributes;
+	$: console.info("fragrance: ", fragrance);
+
 	$: addons = product.Addons.data;
+
 
 	let addonsSelected: Product[] = [];
 	

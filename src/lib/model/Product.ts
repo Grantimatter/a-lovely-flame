@@ -5,7 +5,7 @@ export interface Product {
     meta: string;
     fullSku: string;
     sku: string;
-    fragrance: Fragrances;
+    Fragrances: Fragrances;
     line_item: LineItem
 }
 

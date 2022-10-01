@@ -7,7 +7,9 @@
 		attributes.product_type.data.attributes.Slug
 	}/${attributes.Slug.toLowerCase()}`;
 
-	console.info('Attr: ', attributes);
+
+	$: product = data;
+	$: fragrances = data.Fragrances.data;
 </script>
 
 <div class="w-full h-3/4 sm:h-1/2 md:w-2/5 lg:w-1/3 xl:w-1/5">
@@ -34,17 +36,17 @@
 				</h2>
 			</div>
 
-			
-
 			<div class="card-content justify-center text-center p-2">
-				{#if attributes.fragrance && attributes.fragrance.data}
+				{#if fragrances}
 					<div class="mb-2">
-						{#each attributes.fragrance.data.attributes.scent_notes.data as scentNote}
-						<div class="badge badge-secondary font-semibold">{scentNote.attributes.Title}</div>
+						{#each fragrances as fragrance}
+							{#each fragrance.attributes.scent_notes.data as scentNote}
+								<div class="badge badge-secondary font-semibold">{scentNote.attributes.Title}</div>
+							{/each}
 						{/each}
 					</div>
 
-					{attributes.fragrance.data.attributes.Summary}
+					{fragrances[0].attributes.Summary}
 				{/if}
 			</div>
 		</div>
