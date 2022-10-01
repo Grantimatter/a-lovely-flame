@@ -13,32 +13,34 @@
 	<div class="flex flex-col justify-center items-end w-1/4">
 		<span class="footer-title label-text">Sign up for our newsletter!</span>
 
-		<div class="form-control w-80">
+		<div class="form-control">
 				<label for="signup-modal" class="btn btn-primary modal-button text-neutral self-center "
 					>Sign Up!
 				</label>
 				<input type="checkbox" id="signup-modal" class="modal-toggle" />
-				<label for="signup-modal" class="modal cursor-pointer modal-bottom sm:modal-middle">
-					<iframe
+				<label for="signup-modal" class="modal cursor-pointer modal-bottom md:modal-middle w-full">
+					<label class="object-contain w-fit" for="">
+							<iframe
 						title="newsletter"
-						class="w-full h-full sm:w-4/12 sm:h-4/6 max-w-5xl"
+						class="h-full w-full aspect-[300/581]"
 						src="https://cdn.forms-content.sg-form.com/a0fe7951-39df-11ed-88d6-f6226295fe4d"
 					/>
+					</label>
 				</label>
 		</div>
 	</div>
 
-	<div class="w-1/4">
+	<div class="w-full justify-center md:w-1/4 m-4">
 		<span class="footer-title">Social Media</span>
-		<div class="flex flex-col lg:flex-row">
+		<div class="flex gap-2">
       <a href="https://www.facebook.com/alovelyflameco" target="_blank"
-				><img src={facebook} class="scale-75 bg-primary rounded-xl" alt="Our Facebook" /></a
+				><img src={facebook} class="bg-primary rounded-xl" alt="Our Facebook" /></a
 			>
 			<a href="https://www.instagram.com/alovelyflameco" target="_blank"
-				><img src={instagram} class="scale-75 bg-primary rounded-xl" alt="Our Insagram" /></a
+				><img src={instagram} class="bg-primary rounded-xl" alt="Our Insagram" /></a
 			>
 			<a href="https://www.tiktok.com/@alovelyflameco" target="_blank"
-				><img src={tiktok} class="scale-75 bg-primary rounded-xl" alt="Our TikTok" /></a
+				><img src={tiktok} class="bg-primary rounded-xl" alt="Our TikTok" /></a
 			>
       
 		</div>

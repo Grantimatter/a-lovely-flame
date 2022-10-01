@@ -6,11 +6,13 @@
 
 	let attributes: any;
 
-	$: if (data && data[0]){
-		attributes = data[0].attributes;	
+	$: if (data && data){
+		attributes = data;	
 	} 
 </script>
 
-<div class="m-12">
-	<ProductCard data={attributes} />
+<div class="m-12 w-full h-full">
+	{#each attributes as product}
+		<ProductCard data={product.attributes} />
+	{/each}
 </div>

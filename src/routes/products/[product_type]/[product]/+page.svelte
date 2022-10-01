@@ -16,11 +16,8 @@
 	}
 </script>
 
-<div class="bg-neutral p-8 rounded-2xl flex m-12 h-full w-1/2">
+<div class="bg-neutral p-8 rounded-2xl flex m-12 h-full w-full lg:w-5/12 lg:h-6/12">
 	{#if product}
-		<!-- <div class="text-5xl font-semibold text-center m-8">
-        {fragrance.attributes.Name} - {product.attributes.Title}
-    </div> -->
 		<div class="flex flex-col justify-between md:flex-row gap-8 w-full">
 			<div class="flex flex-col text-2xl items-center gap-2 w-2/3">
 				<img
@@ -35,7 +32,7 @@
 					{product.Title}
 				</div>
 			</div>
-			<div class="flex flex-col w-1/3 bg-base-100 rounded-xl p-8 justify-between">
+			<div class="flex flex-col bg-base-100 rounded-xl p-8 justify-between w-full xl:w-1/2">
 				<div class="flex flex-col">
 					<div class="flex flex-row gap-2 text-2xl justify-center">
 						<h1>${product.Price}</h1>

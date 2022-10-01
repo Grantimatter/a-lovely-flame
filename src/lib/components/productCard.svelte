@@ -1,42 +1,40 @@
 <script lang="ts">
-	import type { Fragrances, Product } from '$lib/model/Product';
-	import { variables } from '$lib/variables';
-	import ImageLoader from './imageLoader.svelte';
-
 	export let data: any;
 
 	let attributes = data;
 	$: attributes = data;
-	let productUri: string = `/products/${attributes.product_type.data.attributes.Slug}/${attributes.Slug.toLowerCase()}`;
+	let productUri: string = `/products/${
+		attributes.product_type.data.attributes.Slug
+	}/${attributes.Slug.toLowerCase()}`;
 </script>
 
-<a
-	class="card w-96 h-96 hover:scale-110 hover:ring-primary hover:ring-2 border-secondary duration-200 bg-neutral shadow-lg hover:shadow-2xl cursor-pointer"
-	href={productUri}
->
-	<figure class="h-2/3 text-transparent z-0 object-fill">
-		{#if attributes.Thumbnail}
-		<img src={attributes.Thumbnail.data.attributes.url} class="object-cover h-full w-full"/>
-			<!-- <ImageLoader
-			data={
-			src: {product.attributes.Thumbnail.data.attributes.url},
-			alt:{"Thumbnail for {product.attributes.Title}"}
-			}		
-			/> -->
-		{/if}
-	</figure>
-	<div class="card-body z-10 h-1/3">
-		<div class="card-title flex justify-center h-full align-middle items-center">
-			<!-- <div class="w-16" /> -->
-			<h2 class="rounded-md flex gap-0">
-				<span class="bg-base-100 m-0 py-3 px-4 rounded-l-lg">{attributes.Title}</span>
-				<span class="bg-primary text-neutral py-3 px-3 m-0 rounded-r-lg">${attributes.Price}</span>
-				
-			</h2>
-		</div>
+<div class="w-full h-3/4 sm:h-1/2 md:w-1/2 lg:w-1/3 xl:w-1/5">
+	<a
+		class="card hover:scale-110 hover:ring-primary hover:ring-2 border-secondary duration-200 bg-neutral shadow-lg hover:shadow-2xl cursor-pointer"
+		href={productUri}
+	>
+		<figure class="h-2/3 text-transparent z-0 object-fill">
+			{#if attributes.Thumbnail}
+				<img
+					src={attributes.Thumbnail.data.attributes.url}
+					alt="product thumbnail"
+					class="object-cover h-full w-full"
+				/>
+			{/if}
+		</figure>
+		<div class="card-body z-10 h-1/3">
+			<div class="card-title flex justify-center h-full align-middle items-center">
+				<!-- <div class="w-16" /> -->
+				<h2 class="rounded-md flex gap-0">
+					<span class="bg-base-100 m-0 py-3 px-4 rounded-l-lg">{attributes.Title}</span>
+					<span class="bg-primary text-neutral py-3 px-3 m-0 rounded-r-lg">${attributes.Price}</span
+					>
+				</h2>
+			</div>
 
-		<div class="card-content justify-center text-center p-2">
-			{attributes.Fragrances.data[0].attributes.Summary}
+			<div class="card-content justify-center text-center p-2">
+				{attributes.Fragrances.data[0].attributes.Summary}
+			</div>
 		</div>
-	</div>
-</a>
+	</a>
+</div>

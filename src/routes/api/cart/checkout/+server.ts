@@ -16,7 +16,7 @@ export const POST: RequestHandler = async ({request}): Promise<Response> => {
         success_url: 'https://alovelyflame.com/payment-success',
         cancel_url: 'https://alovelyflame.com/payment-cancel',
         allow_promotion_codes: true,
-        shipping_address_collection: {allowed_countries: ['US']}
+        shipping_address_collection: {allowed_countries: ['US']},
     });
 
     const res = json(session);
