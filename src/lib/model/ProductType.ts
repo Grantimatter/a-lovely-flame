@@ -1,5 +1,5 @@
 export default class ProductType {
-    constructor(public Title: string, public Plural: string, public Slug: string) {
+    constructor(public Title: string, public Plural: string, public Slug: string, public SortOrder: number) {
     }
 
     /**
@@ -7,7 +7,7 @@ export default class ProductType {
      * @param response API Response object holding the product type
      */
     public static createFromApi(attributes: any):  ProductType{
-        return new ProductType(attributes.Title, attributes.Plural, attributes.Slug);
+        return new ProductType(attributes.Title, attributes.Plural, attributes.Slug, attributes.SortOder);
     }
 
     /**

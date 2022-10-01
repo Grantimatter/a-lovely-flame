@@ -12,7 +12,7 @@
 		fetch(`${variables.STRAPI_API_URL}/product-types/`)
 			.then((res) => res.json())
 			.then((json) => {
-				productTypes = ProductType.createAllFromApi(json);
+				productTypes = ProductType.createAllFromApi(json).sort((a, b) => a.SortOrder - b.SortOrder);
 			})
 			.catch((err) => console.error('Error retreiving products', err));
 	});
