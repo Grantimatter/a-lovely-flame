@@ -5,26 +5,28 @@
 
 	export let data: PageData;
 
-
-
 	let quantity: number = 1;
 	$: product = data[0].attributes;
 
-	$: fragrance = product.Fragrances.data[0].attributes;
+	let fragrance;
+	$: if (product.Fragrances && product.Fragrances.data && product.Fragrances.data[0]) {
+		fragrance = product.Fragrances.data[0].attributes;
+		fragrance = product.Fragrances.data[0].attributes;
+	}
+
 	$: addons = product.Addons.data;
 
-
 	let addonsSelected: Product[] = [];
-	
+
 	$: addonPrice = () => {
 		let price = 0;
-		addonsSelected.forEach(a => price += a.attributes.Price);
+		addonsSelected.forEach((a) => (price += a.attributes.Price));
 		return price;
-		};
+	};
 
 	function addToCart() {
 		let addProdcucts = new Array(quantity).fill(product);
-		const selAdd = addonsSelected.map(addon => addon.attributes);
+		const selAdd = addonsSelected.map((addon) => addon.attributes);
 
 		let finalProds = [];
 		if (addonsSelected.length > 0) {
@@ -82,20 +84,24 @@
 						= ${product.Price * quantity}
 					</div>
 					{#if addons.length > 0}
-					<h1 class="mt-6 mb-3 text-xl font-semibold">Addons</h1>
-					<div id="addons" class="flex flex-row flex-wrap justify-center bg-neutral rounded-xl p-2 text-xl font-semibold items-center align-middle gap-2">
-						
-						{#each addons as addon}
-							<div class="flex flex-row gap-2 p-1">
-								{addon.attributes.Title} - ${addon.attributes.Price}
-								<input type="checkbox" bind:group={addonsSelected} value={addon}>
-							</div>
-						{/each}
-					</div>
+						<h1 class="mt-6 mb-3 text-xl font-semibold">Addons</h1>
+						<div
+							id="addons"
+							class="flex flex-row flex-wrap justify-center bg-neutral rounded-xl p-2 text-xl font-semibold items-center align-middle gap-2"
+						>
+							{#each addons as addon}
+								<div class="flex flex-row gap-2 p-1">
+									{addon.attributes.Title} - ${addon.attributes.Price}
+									<input type="checkbox" bind:group={addonsSelected} value={addon} />
+								</div>
+							{/each}
+						</div>
 					{/if}
 				</div>
 				<div class="bg-neutral p-4 -m-4 rounded-xl prose xl:prose-xl">
-					{@html fragrance.Story}
+					{#if fragrance}
+						{@html fragrance.Story}
+					{/if}
 				</div>
 				<div class="mt-8 bg-neutral rounded-xl">
 					<div class="collapse collapse-arrow">
@@ -117,7 +123,9 @@
 
 				<button class="btn btn-primary" on:click={addToCart}>
 					Add {quantity > 1 ? quantity : ''} To Cart
-					<span class="badge badge-accent ml-1 py-3">${product.Price * quantity + addonPrice()}</span>
+					<span class="badge badge-accent ml-1 py-3"
+						>${product.Price * quantity + addonPrice()}</span
+					>
 				</button>
 			</div>
 		</div>
