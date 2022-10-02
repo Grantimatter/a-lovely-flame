@@ -29,6 +29,8 @@
 		let finalProds = [];
 		if (addonsSelected.length > 0) {
 			finalProds = finalProds.concat(addProdcucts, selAdd);
+		} else {
+			finalProds = addProdcucts;
 		}
 
 		cartStore.add(finalProds);
