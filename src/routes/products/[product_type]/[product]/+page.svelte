@@ -26,11 +26,12 @@
 		let addProdcucts = new Array(quantity).fill(product);
 		const selAdd = addonsSelected.map(addon => addon.attributes);
 
+		let finalProds = [];
 		if (addonsSelected.length > 0) {
-			addProdcucts = addProdcucts.concat(addProdcucts, selAdd);
+			finalProds = finalProds.concat(addProdcucts, selAdd);
 		}
 
-		cartStore.add(addProdcucts);
+		cartStore.add(finalProds);
 	}
 </script>
 
