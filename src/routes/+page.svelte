@@ -39,10 +39,10 @@
 	>
 
 	<span class=""
-		><a href="/products/bundles"
+		><a href="/products/soaks"
 			><img
-				src="https://res.cloudinary.com/dzaonwhkq/image/upload/v1664668553/IMG_0177_rp5kkw.jpg"
-				alt="bundle"
+				src="https://res.cloudinary.com/dzaonwhkq/image/upload/v1664537454/small_bathsoak_16158d40c7.jpg"
+				alt="soaks"
 				class="object-cover w-44 h-44 md:w-96 md:h-96 rounded-xl hover:ring-4 ring-primary hover:scale-110 duration-150"
 			/></a
 		></span
