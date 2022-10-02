@@ -7,66 +7,56 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Julius+Sans+One " />
 </svelte:head>
 
+<div class="place-self-center text-4xl mt-8 flex flex-col justify-center">
+	<h1 class="font-semibold text-center mb-2">Pre-Orders are here!</h1>
+	<a href="/our-story" class="btn btn-primary text-neutral">Check Out Our Story!</a>
+</div>
+
 <div
-	class="hero max-h-screen w-screen lg:w-2/5 m-2 p-6 md:p-16 bg-neutral rounded-xl md:m-8 self-center"
+	class="grid grid-cols-2 grid-rows-2 bg-neutral place-self-center rounded-xl my-8 md:m-8 p-6 gap-4 w-fit"
+	style="grid-auto-rows: 1fr; grid-auto-cols: 1fr;"
 >
-	<div class="hero-content text-center w-full">
-		<div class="max-w-xl">
-			
-			<div>
-				<div class="carousel h-80">
-					
-					<div id="slide1" class="carousel-item relative w-full">
-					  <img src="https://res.cloudinary.com/dzaonwhkq/image/upload/v1664536344/medium_Candlejpg_3b40bdafd0.jpg" class="w-full object-contain" />
-					  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-						<a href="#slide4" class="btn btn-circle">❮</a> 
-						<a href="#slide2" class="btn btn-circle">❯</a>
-					  </div>
-					</div> 
+<span class=""
+		><a href="/products/candles"><img
+			src="https://res.cloudinary.com/dzaonwhkq/image/upload/v1664668535/IMG_0459_x5zgoa.jpg"
+			alt="three candles"
+			class="object-cover w-44 h-44 md:w-96 md:h-96 rounded-xl hover:ring-4 ring-primary hover:scale-110 duration-150"
+		/></a></span
+	>
 
+	<span class=""
+		><a href="/products/bundles"><img
+			src="https://res.cloudinary.com/dzaonwhkq/image/upload/v1664668553/IMG_0177_rp5kkw.jpg"
+			alt="bundle"
+			class="object-cover w-44 h-44 md:w-96 md:h-96 rounded-xl hover:ring-4 ring-primary hover:scale-110 duration-150"
+		/></a></span
+	>
+	<span>
+		<a href="/products/soapbars">
+			<img
+			src="https://res.cloudinary.com/dzaonwhkq/image/upload/v1664668540/soap_r6lztl.jpg"
+			alt="soaps"
+			class="object-cover w-44 h-44 md:w-96 md:h-96 rounded-xl hover:ring-4 ring-primary hover:scale-110 duration-150"
+		/>
+	</a></span>
+		<span class=""
+		><a href="/products/candles"><img
+			src="https://res.cloudinary.com/dzaonwhkq/image/upload/v1664668546/IMG_0174_fzsrx6.jpg"
+			alt="Candle Close Up"
+			class="object-cover w-44 h-44 md:w-96 md:h-96 rounded-xl hover:ring-4 ring-primary hover:scale-110 duration-150"
+		/></a></span>
+</div>
 
-					<div id="slide2" class="carousel-item relative w-full">
-						<img src="https://res.cloudinary.com/dzaonwhkq/image/upload/v1664537469/Candlejpg_80a4ccbc19.jpg" class="w-full object-contain" />
-						<div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-						  <a href="#slide1" class="btn btn-circle">❮</a> 
-						  <a href="#slide3" class="btn btn-circle">❯</a>
-						</div>
-					  </div> 
-
-					  <div id="slide3" class="carousel-item relative w-full">
-						<img src="https://res.cloudinary.com/dzaonwhkq/image/upload/v1664537453/medium_bathsoak_16158d40c7.jpg" class="w-full object-contain" />
-						<div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-						  <a href="#slide2" class="btn btn-circle">❮</a> 
-						  <a href="#slide1" class="btn btn-circle">❯</a>
-						</div>
-					  </div>
-				  </div>
-			</div>
-
-			<p class="mt-8">
-				Every Pre-Order Includes: Two Soaps in Not My Problem and a Sisal Soap Bag! A $24 Value!
+<div
+	class="hero max-h-screen w-screen lg:w-2/5 m-2 bg-neutral rounded-xl md:m-8 self-center"
+>
+	<div class="hero-content text-center w-full" style="font-family: Julius Sans One;">
+		<div class="max-w-xl py-6">
+			<p class="prose lg:prose-lg xl:prose-xl">
+				{`Every Pre-Order Includes: Two Soaps in "Not My Problem" and a Sisal Soap Bag! A $24 Value!
 				Launch Day is October 12th! Don’t Miss Out! All Pre-Orders will be Shipped October 12th!
-				Sign-Up for our Email List for 10% Off!
+				Sign-Up for our Email List for 10% Off!`}
 			</p>
 		</div>
 	</div>
 </div>
-
-
-<!-- <div
-	class="hero max-h-screen w-screen lg:w-2/5 m-2 p-6 md:p-16 bg-neutral rounded-xl md:m-8 self-center"
->
-	<div class="hero-content text-center w-full">
-		<div class="max-w-xl">
-			<h1 class="text-2xl md:text-5xl font-bold">Hello and Welcome to A Lovely Flame!</h1>
-			<p class="py-6">We're so glad to have you, here's a couple links to get you started!</p>
-			<a class="btn btn-primary text-neutral" href="/products/bundles">Start Shopping!</a>
-			<a class="btn btn-primary ml-4 text-neutral" href="/our-story">Our Story!</a>
-			<p class="mt-8">
-				Every Pre-Order Includes: Two Soaps in Not My Problem and a Sisal Soap Bag! A $24 Value!
-				Launch Day is October 12th! Don’t Miss Out! All Pre-Orders will be Shipped October 12th!
-				Sign-Up for our Email List for 10% Off!
-			</p>
-		</div>
-	</div>
-</div> -->

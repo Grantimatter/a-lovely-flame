@@ -44,9 +44,11 @@
 							{/each}
 						{/each}
 					</div>
-					<div class="prose xl:prose-xl">
-						{@html fragrances[0].attributes.Summary}
-					</div>
+					{#if fragrances[0]}
+						<div class="prose xl:prose-xl">
+							{@html fragrances[0].attributes.Summary}
+						</div>
+					{/if}
 				{/if}
 			</div>
 		</div>
