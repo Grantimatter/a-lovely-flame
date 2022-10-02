@@ -98,11 +98,12 @@
 						</div>
 					{/if}
 				</div>
-				<div class="bg-neutral p-4 -m-4 rounded-xl prose xl:prose-xl">
-					{#if fragrance}
+				{#if fragrance}
+					<div class="bg-neutral p-4 -m-4 rounded-xl prose xl:prose-xl">
 						{@html fragrance.Story}
-					{/if}
-				</div>
+					</div>
+				{/if}
+
 				<div class="mt-8 bg-neutral rounded-xl">
 					<div class="collapse collapse-arrow">
 						<input type="checkbox" checked />
