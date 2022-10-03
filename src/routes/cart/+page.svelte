@@ -38,7 +38,7 @@
 			<span class="">Product</span>
 			<span class="">Price</span>
 		</div>
-		{#each $cartProducts as product}
+		{#each $cartProducts || [] as product}
 			<div class="text-xl flex flex-row justify-center gap-12 px-8 ">
 				<span class="">{product.Title}</span>
 				<span class="">${product.Price}</span>

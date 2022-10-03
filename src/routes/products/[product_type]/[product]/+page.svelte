@@ -89,7 +89,7 @@
 							id="addons"
 							class="flex flex-row flex-wrap justify-center bg-neutral rounded-xl p-2 text-xl font-semibold items-center align-middle gap-2"
 						>
-							{#each addons as addon}
+							{#each addons || [] as addon}
 								<div class="flex flex-row gap-2 p-1">
 									{addon.attributes.Title} - ${addon.attributes.Price}
 									<input type="checkbox" bind:group={addonsSelected} value={addon} />
@@ -105,21 +105,33 @@
 				{/if}
 
 				<div class="mt-8 bg-neutral rounded-xl">
+					{#if product.WhyLove}
 					<div class="collapse collapse-arrow">
 						<input type="checkbox"/>
 						<div class="collapse-title text-xl font-medium">Why You'll Love It!</div>
 						<div class="collapse-content bg-base-300">
-							<p class="pt-3 prose xl:prose-xl">{@html product.WhyLove}</p>
+							<p class="pt-3 prose xl:prose-xl">{@html product.ProductType.WhyLove}</p>
 						</div>
 					</div>
-
+					{/if}
+					{#if product.Usage}
 					<div class="collapse collapse-arrow">
 						<input type="checkbox" />
 						<div class="collapse-title text-xl font-medium">Usage</div>
 						<div class="collapse-content bg-base-300 rounded-b-xl">
-							<p class="pt-3 prose xl:prose-xl">{@html product.Usage}</p>
+							<p class="pt-3 prose xl:prose-xl">{@html product.ProductType.Usage}</p>
 						</div>
 					</div>
+					{/if}
+					{#if product.ProductType.Ingredients}
+					<div class="collapse collapse-arrow">
+						<input type="checkbox" />
+						<div class="collapse-title text-xl font-medium">Usage</div>
+						<div class="collapse-content bg-base-300 rounded-b-xl">
+							<p class="pt-3 prose xl:prose-xl">{@html product.ProductType.Ingredients}</p>
+						</div>
+					</div>
+					{/if}
 				</div>
 
 				<button class="btn btn-primary" on:click={addToCart}>

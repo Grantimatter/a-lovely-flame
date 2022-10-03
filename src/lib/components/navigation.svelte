@@ -71,7 +71,7 @@
 									class="p-2 bg-base-200 z-[50] border-primary rounded-xl border-2 border-opacity-75"
 									transition:fade
 								>
-									{#each productTypes as type}
+									{#each productTypes || [] as type}
 										<li class="">
 											<a href={`/products/${type.Slug.toLowerCase()}`}>{type.Plural}</a>
 										</li>
@@ -104,7 +104,7 @@
 			<li><span>Products</span></li>
 
 			<ul class="dropdown-content menu w-52 p-2 bg-base-200 rounded-xl">
-				{#each productTypes as type}
+				{#each productTypes || [] as type}
 					<li on:click={() => (checked = false)}>
 						<a href={`/products/${type.Slug.toLowerCase()}`}>{type.Plural}</a>
 					</li>

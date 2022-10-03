@@ -13,23 +13,23 @@ export async function getAllProducts(): Promise<Product[]> {
 }
 
 export async function getProductLineItems(products: Product[]): Promise<LineItem[]> {
-    return fetch(`${variables.STRAPI_API_URL}/products?fields[0]=Slug&fields[1]=line_item`)
+    return fetch(`${variables.STRAPI_API_URL}/products?fields[0]=Slug&fields[1]=LineItem`)
     .then(res => res.json())
     .then(json => json.data)
     .then((data) => {
         const fetchedProducts: Product[] = data.map((pr: any) => {
             return {
                 Slug: pr.attributes.Slug,
-                line_item: pr.attributes.line_item
+                LineItem: pr.attributes.LineItem
             }
         });
         
-        const line_items: LineItem[] =[];
+        const LineItems: LineItem[] =[];
         products.forEach((product: Product) => {
             fetchedProducts.forEach((fp: Product) => {
                 if (product.Slug == fp.Slug) {
-                    const item = line_items.find((i) => {
-                        if (i.Price == fp.line_item) {
+                    const item = LineItems.find((i) => {
+                        if (i.Price == fp.LineItem) {
                             i.quantity += 1;
                         return i;
                         }
@@ -37,9 +37,9 @@ export async function getProductLineItems(products: Product[]): Promise<LineItem
                     });
 
                     if(!item) {
-                        const newItem: LineItem = {price: fp.line_item, quantity: 1};
+                        const newItem: LineItem = {price: fp.LineItem, quantity: 1};
 
-                        line_items.push(newItem);
+                        LineItems.push(newItem);
                     }
                     // else {
                     //     item.quantity += 1;
@@ -49,7 +49,7 @@ export async function getProductLineItems(products: Product[]): Promise<LineItem
             });
         });
 
-        return line_items;
+        return LineItems;
     });
 }
 
@@ -58,13 +58,13 @@ export interface LineItem {
     quantity: number
 }
 
-function addLineItem(fetchedProducts: Product[], line_items: LineItem[], newLineItem: LineItem): LineItem {
+function addLineItem(fetchedProducts: Product[], LineItems: LineItem[], newLineItem: LineItem): LineItem {
     fetchedProducts.forEach(product => {
-        if (product.line_item.price === newLineItem.price) {
+        if (product.LineItem.price === newLineItem.price) {
             newLineItem = product.quantity + 1;
         }
         return product;
     });
 
-    return line_items;
+    return LineItems;
 }

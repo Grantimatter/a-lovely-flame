@@ -6,7 +6,7 @@ export interface Product {
     fullSku: string;
     sku: string;
     Fragrances: Fragrances;
-    line_item: LineItem
+    LineItem: LineItem
 }
 
 export interface ProductData {

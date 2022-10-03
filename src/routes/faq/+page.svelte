@@ -4,7 +4,7 @@
 
 <div class="flex w-full justify-center">
 <div class="flex flex-col justify-center align-middle p-16 w-fit">
-	{#each data as faq, i}
+	{#each data || [] as faq, i}
     <div>
 		<div
 			tabindex="0"

@@ -8,7 +8,7 @@
 </script>
 
 <div class="flex flex-row justify-center flex-wrap gap-12 m-12">
-	{#each data as bundle}
+	{#each data || [] as bundle}
 		<BundleCard data={bundle.attributes} />
 	{/each}
 </div>
