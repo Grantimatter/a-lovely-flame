@@ -106,7 +106,7 @@
 
 				<div class="mt-8 bg-neutral rounded-xl">
 					<div class="collapse collapse-arrow">
-						<input type="checkbox" checked />
+						<input type="checkbox"/>
 						<div class="collapse-title text-xl font-medium">Why You'll Love It!</div>
 						<div class="collapse-content bg-base-300">
 							<p class="pt-3 prose xl:prose-xl">{@html product.WhyLove}</p>

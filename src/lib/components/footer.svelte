@@ -12,7 +12,7 @@
 
 	<div class="w-1/8 ">
 		<span class="footer-title place-self-center">Contact Us!</span>
-		<a href="/our-story" class="link link-hover">support@alovelyflame.com</a>
+		<span>support@alovelyflame.com</span>
 	</div>
 
 	<div class="flex flex-col items-center">
