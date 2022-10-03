@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { Fragrances, Product } from '$src/lib/model/Product';
 	import { cartStore } from '$src/lib/stores/cartStore';
+	import { productStore } from '$src/lib/stores/productStore';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -106,7 +107,7 @@
 
 				<div class="mt-8 bg-neutral rounded-xl">
 					<div class="collapse collapse-arrow">
-						<input type="checkbox"/>
+						<input type="checkbox" />
 						<div class="collapse-title text-xl font-medium">Why You'll Love It!</div>
 						<div class="collapse-content bg-base-300">
 							<p class="pt-3 prose xl:prose-xl">{@html product.WhyLove}</p>
@@ -120,6 +121,16 @@
 							<p class="pt-3 prose xl:prose-xl">{@html product.Usage}</p>
 						</div>
 					</div>
+
+					{#if product.product_type && product.product_type.data.attributes && product.product_type.data.attributes.Ingredients}
+					<div class="collapse collapse-arrow">
+						<input type="checkbox" />
+						<div class="collapse-title text-xl font-medium">Ingredients</div>
+						<div class="collapse-content bg-base-300 rounded-b-xl">
+							<p class="pt-3">{product.product_type.data.attributes.Ingredients}</p>
+						</div>
+					</div>
+					{/if}
 				</div>
 
 				<button class="btn btn-primary" on:click={addToCart}>
