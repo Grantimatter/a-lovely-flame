@@ -8,4 +8,7 @@ declare namespace App {
 	// interface PublicEnv {}
 	// interface Session {}
 	// interface Stuff {}
+	interface ImportMetaEnv {
+		VITE_PUBLIC_STRAPI_URI: string;
+	}
 }

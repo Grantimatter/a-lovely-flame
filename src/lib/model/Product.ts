@@ -1,6 +1,12 @@
+import type { LineItem } from "../utility/strapi/productsApi";
+
 export interface Product {
-    data: ProductData;
+    attributes: PurpleAttributes;
     meta: string;
+    fullSku: string;
+    sku: string;
+    Fragrances: Fragrances;
+    line_item: LineItem
 }
 
 export interface ProductData {
@@ -18,8 +24,9 @@ export interface PurpleAttributes {
     locale:         Locale;
     sku:            string;
     Slug:           string;
+    Plural:         string;
     Media?:         Addons;
-    Fragrances?:    Fragrances;
+    Fragrances:    Fragrances;
     Addons?:        Addons;
     Thumbnail:      Thumbnail;
     localizations?: Fragrances;
@@ -89,7 +96,7 @@ export interface Thumbnail {
 }
 
 export interface Fragrances {
-    data: FragrancesDatum[];
+    attributes: StickyAttributes;
 }
 
 export interface FragrancesDatum {
@@ -102,6 +109,7 @@ export interface StickyAttributes {
     createdAt:   Date;
     updatedAt:   Date;
     publishedAt: Date;
+    Summary:      string;
     locale:      Locale;
     SKU:         string;
     SKUID:       string;

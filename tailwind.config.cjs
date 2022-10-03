@@ -4,7 +4,7 @@ module.exports = {
 	theme: {
 		extend: {}
 	},
-	plugins: [require('daisyui')],
+	plugins: [require('daisyui'), require('@tailwindcss/typography')],
 	daisyui: {
 		themes: [
 			'light',
@@ -48,6 +48,14 @@ module.exports = {
 					success: '#36D399',
 					warning: '#fde047',
 					error: '#f87171',
+
+					fontFamily: {
+						'sans': ['"Julius Sans One"','ui-sans-serif', 'system-ui'],
+						'serif': ['"Julius Sans One"', 'Georgia'],
+						'mono': ['ui-monospace', 'SFMono-Regular'],
+						'display': ['"Julius Sans On"e'],
+						'body': ['"Julius Sans One"']
+					  },
 
 					'--rounded-box': '1rem', // border radius rounded-box utility class, used in card and other large boxes
 					'--rounded-btn': '0.5rem', // border radius rounded-btn utility class, used in buttons and similar element

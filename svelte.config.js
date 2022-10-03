@@ -9,13 +9,12 @@ const config = {
 
 	kit: {
 		adapter: adapter(),
-		// vite: {
-		// 	server: {
-		// 		fs: {
-		// 			allow: ['fonts']
-		// 		}
-		// 	}
-		// }
+		alias: {
+			$src: 'src',
+			$components: 'src/lib/components',
+			$stores: 'src/lib/stores',
+			$static: 'static'
+		}
 	}
 };
 

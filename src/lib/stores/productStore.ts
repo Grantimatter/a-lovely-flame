@@ -1,13 +1,13 @@
-import type { Product } from '$lib/Product';
-import { getAllProducts } from '$lib/utility/strapi/productCms';
+import type { Product } from '$lib/model/Product';
+import { getAllProducts } from '$lib/utility/strapi/productsApi';
 import { writable } from 'svelte/store';
 
 function createProducts() {
 	const { subscribe, set, update } = writable<Product[]>([]);
 
 	getAllProducts().then(
-		(productList) => {
-			set(productList);
+		(res) => {
+			set(res)
 		}
 	);
 
@@ -17,4 +17,4 @@ function createProducts() {
 	};
 }
 
-export const productList = createProducts();
+export const productStore = createProducts();

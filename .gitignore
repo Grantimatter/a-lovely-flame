@@ -8,6 +8,7 @@ node_modules
 !.env.example
 bun.lockb
 package-lock.json
+.env
 
 # Local Netlify folder
 .netlify
