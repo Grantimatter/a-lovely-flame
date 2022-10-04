@@ -14,13 +14,11 @@ export const POST: RequestHandler = async ({request}): Promise<Response> => {
     const session = await stripe.checkout.sessions.create({
         line_items,
         mode: 'payment',
-        success_url: `${variables.HOST_URL}/payment-success`,
+        success_url: `${variables.HOST_URL}/payment-success?session_id={CHECKOUT_SESSION_ID}`,
         cancel_url: `${variables.HOST_URL}/cart`,
         allow_promotion_codes: true,
         shipping_address_collection: {allowed_countries: ['US']},
     });
 
-    const res = json(session);
-
-    return res;
+    return json(session);
 };
