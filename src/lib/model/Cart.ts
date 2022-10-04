@@ -68,7 +68,7 @@ export default class Cart {
         return cart;
     }
 
-    public static clearCart(cart: Cart) {
+    public static clearCart() {
         localStorage.removeItem("cart");
         // TODO Remove from API as well
     }

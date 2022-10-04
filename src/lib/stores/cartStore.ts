@@ -28,9 +28,9 @@ function createCartStore() {
 				}
 			},
 
-			clear: (cart: Cart) => {
+			clear: () => {
 				if (browser) {
-					Cart.clearCart(cart);
+					Cart.clearCart();
 					set(defaultValue);
 					return defaultValue;
 				}
