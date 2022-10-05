@@ -22,9 +22,9 @@ function createCartStore() {
 				}
 			},
 
-			remove: (productList: Product) => {
+			remove: (product: Product) => {
 				if (browser) {
-					Cart.removeFromCart(productList).then((newCart) => set(newCart));
+					Cart.removeFromCart(product).then((newCart) => set(newCart));
 				}
 			},
 

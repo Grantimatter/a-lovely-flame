@@ -27,7 +27,7 @@
 		<div tabindex="0" class="mt-3 card card-compact dropdown-content w-52 bg-neutral ring-primary ring-2 shadow">
             
 			<div class="card-body">
-                {#if $cartStore}
+                {#if $total > 0}
 				<span class="text-secondary">Subtotal: ${$total}</span>
 				<div class="card-actions">
 					<a href="/cart" class="btn btn-primary btn-block">View cart!</a>

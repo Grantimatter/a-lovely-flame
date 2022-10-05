@@ -42,7 +42,7 @@ export default class Cart {
         let removedCount = 0;
 
         cart.products = cart.products.filter((p) => {
-            if (removedCount < 1 && p.fullSku == product.fullSku) {
+            if (removedCount < 1 && p.Slug == product.Slug) {
                 removedCount++;
                 return false;
             }
