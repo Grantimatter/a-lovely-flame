@@ -42,7 +42,7 @@
 			{#each $cartProducts as product}
 				<div class="col-span-1">
 					<i
-						class="material-icons hover:text-error hover:scale-125 cursor-pointer mr-4 align-middle"
+						class="material-symbols-outlined hover:text-error hover:scale-125 cursor-pointer mr-4 align-middle"
 						on:click={() => removeProduct(product)}>cancel</i
 					>
 					<span>{product.Title}</span>
@@ -57,38 +57,6 @@
 	<div class="rounded-b-xl bg-primary text-neutral p-4 mt-0">
 		<div class="flex justify-end gap-4 align-middle items-center">
 			<span class="font-bold">Subtotal: ${$total}</span>
-			{#if $cartProducts.length > 0}
-				<button
-					class="btn btn-accent shadow-xl text-neutral font-bold"
-					on:click={handleCheckoutClick}>Checkout!</button
-				>
-			{/if}
-		</div>
-	</div>
-</div>
-
-<div
-	class="flex flex-col justify-center self-center w-full m-2 sm:w-3/4 md:w-1/2 2xl:w-1/3 my-8 shadow-xl"
->
-	<div class="flex flex-col bg-neutral rounded-t-xl pb-8 gap-4">
-		<div class="flex flex-row justify-center px-8 pt-8 mb-4 underline gap-32">
-			<span class="">Product</span>
-			<span class="">Price</span>
-		</div>
-		{#each $cartProducts as product}
-			<div class="text-xl flex flex-row justify-center gap-12 px-8 ">
-				<span class="">{product.Title}</span>
-				<span class="">${product.Price}</span>
-				<span class="hover:text-error cursor-pointer" on:click={() => removeProduct(product)}
-					>Remove</span
-				>
-			</div>
-		{/each}
-	</div>
-
-	<div class="rounded-b-xl bg-primary text-neutral p-4">
-		<div class="flex justify-end gap-4 align-middle items-center">
-			<span class="font-bold">Total: ${$total}</span>
 			{#if $cartProducts.length > 0}
 				<button
 					class="btn btn-accent shadow-xl text-neutral font-bold"
