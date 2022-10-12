@@ -29,7 +29,7 @@ export async function getProductLineItems(products: Product[]): Promise<LineItem
             fetchedProducts.forEach((fp: Product) => {
                 if (product.Slug == fp.Slug) {
                     const item = line_items.find((i) => {
-                        if (i.Price == fp.line_item) {
+                        if (i.Price == fp.line_item.price) {
                             i.quantity += 1;
                         return i;
                         }
@@ -38,6 +38,7 @@ export async function getProductLineItems(products: Product[]): Promise<LineItem
 
                     if(!item) {
                         const newItem: LineItem = {price: fp.line_item, quantity: 1};
+                        
 
                         line_items.push(newItem);
                     }
@@ -49,22 +50,19 @@ export async function getProductLineItems(products: Product[]): Promise<LineItem
             });
         });
 
+        line_items.forEach((i) => {
+            i.adjustable_quantity =  {
+                enabled: true,
+                minimum: 1,
+                maximum: 10
+            }
+        });
         return line_items;
     });
 }
 
 export interface LineItem {
     price: string,
-    quantity: number
-}
-
-function addLineItem(fetchedProducts: Product[], line_items: LineItem[], newLineItem: LineItem): LineItem {
-    fetchedProducts.forEach(product => {
-        if (product.line_item.price === newLineItem.price) {
-            newLineItem = product.quantity + 1;
-        }
-        return product;
-    });
-
-    return line_items;
+    quantity: number,
+    adjustable_quantity: any
 }

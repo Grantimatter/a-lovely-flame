@@ -10,7 +10,6 @@ export const load: PageServerLoad = async ({url}) => {
     if (!session_id) return;
     
     const session = await stripe.checkout.sessions.retrieve(session_id);
-    //const customer = await stripe.customers.retrieve('session.customer');
 
-    return json(session);
+    return session;
 };

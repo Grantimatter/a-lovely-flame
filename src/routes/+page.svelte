@@ -1,5 +1,7 @@
 <script lang="ts">
 	import logo from '$lib/assets/logo.svg';
+	import NewsletterPopup from '$components/email/newsletterPopup.svelte';
+	import NewsLetterForm from '$src/lib/components/email/newsLetterForm.svelte';
 	export let data;
 </script>
 
@@ -8,19 +10,19 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Julius+Sans+One " />
 </svelte:head>
 
+<NewsletterPopup />
+
 <div class="place-self-center text-4xl mt-8 flex flex-col justify-center">
-	<h1 class="font-semibold text-center mb-2">Pre-Orders are Here!</h1>
 	<a href="/our-story" class="btn btn-primary text-neutral">Check Out Our Story!</a>
 </div>
 
 <div class="hero max-h-screen w-screen lg:w-2/5 m-2 bg-neutral rounded-xl md:m-8 self-center">
 	<div class="hero-content text-center w-full" style="font-family: Julius Sans One;">
 		<div class="max-w-xl py-6">
-			<p class="prose lg:prose-lg xl:prose-xl">
-				{`Every Pre-Order Includes: Two Soaps in "Not My Problem" and a Sisal Soap Bag! A $24 Value!
-				Launch Day is October 12th! Don’t Miss Out! All Pre-Orders will be Shipped October 12th!
-				Sign-Up for our Email List for 10% Off!`}
+			<p class="prose lg:prose-lg xl:prose-xl mb-4">
+				{`Sign-Up for our Email List for 10% Off!`}
 			</p>
+			<NewsLetterForm data={{opened: false}}/>
 		</div>
 	</div>
 </div>
@@ -67,5 +69,3 @@
 		></span
 	>
 </div>
-
-

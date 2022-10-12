@@ -2,6 +2,7 @@
 	import instagram from '$src/instagram.svg';
 	import tiktok from '$src/tiktok.svg';
 	import facebook from '$src/facebook.svg';
+  	import NewsLetterForm from './email/newsLetterForm.svelte';
 </script>
 
 <footer class="footer pt-6 pb-7 bg-neutral text-base-content justify-center flex flex-wrap gap-24">
@@ -18,7 +19,9 @@
 	<div class="flex flex-col items-center">
 		<span class="footer-title label-text">Sign up for our newsletter!</span>
 
-		<div class="form-control">
+		<NewsLetterForm data={{opened: false}}/>
+
+		<!-- <div class="form-control">
 				<label for="signup-modal" class="btn btn-primary modal-button text-neutral"
 					>Sign Up!
 				</label>
@@ -32,7 +35,7 @@
 					/>
 					</label>
 				</label>
-		</div>
+		</div> -->
 	</div>
 
 	<div class="w-full justify-center max-w-sm">

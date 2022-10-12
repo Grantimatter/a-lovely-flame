@@ -2,6 +2,7 @@
 	import type { Fragrances, Product } from '$src/lib/model/Product';
 	import { cartStore } from '$src/lib/stores/cartStore';
 	import { productStore } from '$src/lib/stores/productStore';
+  import { fly } from 'svelte/transition';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -16,6 +17,7 @@
 	}
 
 	$: addons = product.Addons.data;
+	$: product_type = product.product_type.data.attributes;
 
 	let addonsSelected: Product[] = [];
 
@@ -37,8 +39,26 @@
 		}
 
 		cartStore.add(finalProds);
+		addSuccessToast();
+	}
+
+	let showToast = false;
+
+	function addSuccessToast() {
+		showToast = true;
+		setInterval(() => {
+			showToast = false;
+		}, 10000);
 	}
 </script>
+
+{#if showToast}
+	<div class="toast toast-center">
+		<div class="alert bg-primary animate-bounce w-96 justify-center" transition:fly={{ y: 200, duration: 500 }}>
+				<div class="text-neutral text-center place-self-center">Added {quantity} {quantity > 1 ? product_type.Plural : product_type.Title} to your cart!</div>
+		</div>
+	</div>
+{/if}
 
 <div class="self-center bg-neutral p-8 rounded-2xl my-12 h-full w-full lg:w-8/12 xl:w-7/12">
 	{#if product}
@@ -123,17 +143,17 @@
 					</div>
 
 					{#if product.product_type && product.product_type.data.attributes && product.product_type.data.attributes.Ingredients}
-					<div class="collapse collapse-arrow">
-						<input type="checkbox" />
-						<div class="collapse-title text-xl font-medium">Ingredients</div>
-						<div class="collapse-content bg-base-300 rounded-b-xl">
-							<p class="pt-3">{product.product_type.data.attributes.Ingredients}</p>
+						<div class="collapse collapse-arrow">
+							<input type="checkbox" />
+							<div class="collapse-title text-xl font-medium">Ingredients</div>
+							<div class="collapse-content bg-base-300 rounded-b-xl">
+								<p class="pt-3">{product.product_type.data.attributes.Ingredients}</p>
+							</div>
 						</div>
-					</div>
 					{/if}
 				</div>
 
-				<button class="btn btn-primary" on:click={addToCart}>
+				<button class="btn btn-primary text-neutral" on:click={addToCart}>
 					Add {quantity > 1 ? quantity : ''} To Cart
 					<span class="badge badge-accent ml-1 py-3"
 						>${product.Price * quantity + addonPrice()}</span

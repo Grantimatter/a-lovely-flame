@@ -28,6 +28,7 @@
             
 			<div class="card-body">
                 {#if $total > 0}
+				<span class="text-base">{$cartStore.products.length} Item{$cartStore.products.length > 1 ? "s" : ""} In Cart</span>
 				<span class="text-secondary">Subtotal: ${$total}</span>
 				<div class="card-actions">
 					<a href="/cart" class="btn btn-primary btn-block">View cart!</a>

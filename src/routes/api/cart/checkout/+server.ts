@@ -18,6 +18,7 @@ export const POST: RequestHandler = async ({request}): Promise<Response> => {
         cancel_url: `${variables.HOST_URL}/cart`,
         allow_promotion_codes: true,
         shipping_address_collection: {allowed_countries: ['US']},
+        automatic_tax: {enabled: true}
     });
 
     return json(session);
